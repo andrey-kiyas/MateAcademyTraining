@@ -2,7 +2,8 @@ package MateAcademy.DataBase.models;
 
 public class LiteraryFormat {
     private Long id;
-    private String title;
+    private String format;
+    private boolean isDeleted;
 
     public Long getId() {
         return id;
@@ -13,12 +14,21 @@ public class LiteraryFormat {
         return this;
     }
 
-    public String getTitle() {
-        return title;
+    public String getFormat() {
+        return format;
     }
 
-    public LiteraryFormat setTitle(String title) {
-        this.title = title;
+    public LiteraryFormat setFormat(String format) {
+        this.format = format;
+        return this;
+    }
+
+    public boolean isDeleted() {
+        return isDeleted;
+    }
+
+    public LiteraryFormat setDeleted(boolean deleted) {
+        this.isDeleted = deleted;
         return this;
     }
 
@@ -26,7 +36,8 @@ public class LiteraryFormat {
     public String toString() {
         return "LiteraryFormat{" +
                 "id=" + id +
-                ", title='" + title + '\'' +
+                ", format='" + format + '\'' +
+                ", isDeleted=" + isDeleted +
                 '}';
     }
 }

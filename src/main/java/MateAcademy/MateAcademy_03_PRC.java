@@ -1,8 +1,11 @@
 package MateAcademy;
 
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -212,9 +215,6 @@ public class MateAcademy_03_PRC {
 //        breakCamelCase("camelCasing"); // == "camel Casing"
 //        breakCamelCase("helloWorld"); // == "hello World"
 
-        // -----------------------------
-
-
 //        System.out.println(getExtraPerfectNumbers(1));
 //        System.out.println(getExtraPerfectNumbers(3));  // == {1, 3}
 //        System.out.println(getExtraPerfectNumbers(7));  // == {1, 3, 5, 7}
@@ -237,16 +237,38 @@ public class MateAcademy_03_PRC {
 
 //        int i = 1;
 
+//        int rowIndex = 1;
+//        int columnIndex = 1;
+//        int[][] array = {
+//                {1, 2, 3},
+//                {4, 5, 6},
+//                {7, 8, 9}};
+//        System.out.println(neighboursCellsSum(array, rowIndex, columnIndex));
+
+
+        // -----------------------------
 
 
 
 
 
-        String str = "Hel:world";
-        System.out.println(str.substring(0,str.indexOf(":")));
+    }
 
-
-
+    public static int neighboursCellsSum(int[][] array, int rowIndex, int columnIndex) {
+        int neighboursCellsSum = 0;
+        if (rowIndex > 0) {
+            neighboursCellsSum += array[rowIndex - 1][columnIndex];
+        }
+        if (rowIndex < array.length - 1) {
+            neighboursCellsSum += array[rowIndex + 1][columnIndex];
+        }
+        if (columnIndex > 0) {
+            neighboursCellsSum += array[rowIndex][columnIndex - 1];
+        }
+        if (columnIndex < array.length - 1) {
+            neighboursCellsSum += array[rowIndex][columnIndex + 1];
+        }
+        return neighboursCellsSum;
     }
 
     public static String breakCamelCase(String input) {
