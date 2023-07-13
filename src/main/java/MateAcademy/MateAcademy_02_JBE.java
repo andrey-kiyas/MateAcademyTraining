@@ -33,9 +33,6 @@ public class MateAcademy_02_JBE {
 //        calculatePrice(product);
 
 
-
-
-
 //        Student student1 = new Student();
 
 //                {"Alina", "Ivanova", 30, true},
@@ -45,32 +42,6 @@ public class MateAcademy_02_JBE {
 //                {"Daria", "Kovalchyk", 33, false},
 //                {"Olha", "Kulyk", 22, true}
 //        };
-
-        Student stud1 = new Student();
-        stud1.age = 33;
-        stud1.isEmployed = true;
-
-        Student stud2 = new Student();
-        stud2.age = 31;
-        stud2.isEmployed = true;
-
-        Student stud3 = new Student();
-        stud3.age = 30;
-        stud3.isEmployed = true;
-
-        Student stud4 = new Student();
-        stud4.age = 40;
-        stud4.isEmployed = true;
-
-        Student stud5 = new Student();
-        stud5.age = 37;
-        stud5.isEmployed = true;
-
-        Student[] student = new Student[]{stud1, stud2, stud3, stud4, stud5};
-
-        getPercentOfEmployedStudent(student);
-
-
 
 
 

@@ -2,6 +2,7 @@ package MateAcademy;
 
 import java.io.*;
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -238,9 +239,12 @@ public class MateAcademy_03_PRC {
 
 
 
-        String str = "Hel:world";
 
+
+
+        String str = "Hel:world";
         System.out.println(str.substring(0,str.indexOf(":")));
+
 
 
     }
