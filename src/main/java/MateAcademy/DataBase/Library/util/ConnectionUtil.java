@@ -1,4 +1,4 @@
-package MateAcademy.DataBase.util;
+package MateAcademy.DataBase.Library.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

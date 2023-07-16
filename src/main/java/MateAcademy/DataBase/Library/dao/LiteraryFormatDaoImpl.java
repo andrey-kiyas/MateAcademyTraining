@@ -1,7 +1,7 @@
-package MateAcademy.DataBase.dao;
+package MateAcademy.DataBase.Library.dao;
 
-import MateAcademy.DataBase.models.LiteraryFormat;
-import MateAcademy.DataBase.util.ConnectionUtil;
+import MateAcademy.DataBase.Library.models.LiteraryFormat;
+import MateAcademy.DataBase.Library.util.ConnectionUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

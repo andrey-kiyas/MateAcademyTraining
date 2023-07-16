@@ -1,4 +1,4 @@
-package MateAcademy.DataBase.models;
+package MateAcademy.DataBase.Library.models;
 
 public class LiteraryFormat {
     private Long id;

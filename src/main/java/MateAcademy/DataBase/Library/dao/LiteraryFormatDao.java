@@ -1,6 +1,6 @@
-package MateAcademy.DataBase.dao;
+package MateAcademy.DataBase.Library.dao;
 
-import MateAcademy.DataBase.models.LiteraryFormat;
+import MateAcademy.DataBase.Library.models.LiteraryFormat;
 import java.util.List;
 
 public interface LiteraryFormatDao {
