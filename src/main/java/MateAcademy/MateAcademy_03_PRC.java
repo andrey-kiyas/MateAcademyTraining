@@ -249,9 +249,6 @@ public class MateAcademy_03_PRC {
         // -----------------------------
 
 
-
-
-
     }
 
     public static int neighboursCellsSum(int[][] array, int rowIndex, int columnIndex) {
