@@ -26,17 +26,32 @@ public class BookDaoImpl implements BookDao {
             createBookStatement.setString(1, book.getTittle());
             createBookStatement.setBigDecimal(2, book.getPrice());
             createBookStatement.setLong(3, book.getFormat().getId());
-
-
             createBookStatement.executeUpdate();
             ResultSet generatedKeys = createBookStatement.getGeneratedKeys();
             if (generatedKeys.next()) {
                 Long id = generatedKeys.getObject(1, Long.class);
                 book.setId(id);
             }
-            return book;
         } catch (SQLException e) {
             throw new RuntimeException("Can't insert book to DB", e);
+        }
+        insertAuthors(book);
+        return book;
+    }
+
+    private void insertAuthors(Book book){
+        String insertAuthorsQuery = "INSERT INTO books_authors (book_id, author_id) VALUES (?, ?);";
+        try (Connection connection = ConnectionUtil.getConnection();
+             PreparedStatement addAuthorToBookStatement = connection
+                     .prepareStatement(insertAuthorsQuery)
+        ) {
+            addAuthorToBookStatement.setLong(1, book.getId());
+            for (Author author : book.getAuthors()) {
+                addAuthorToBookStatement.setLong(2, author.getId());
+                addAuthorToBookStatement.executeUpdate();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Can't insert authors to book" + book, e);
         }
     }
 
@@ -44,25 +59,46 @@ public class BookDaoImpl implements BookDao {
     public Book get(Long id) {
         String selectRequest = "SELECT b.id as book_id, tittle, price, lf.id as literary_format_id," +
                 " format FROM books b JOIN literary_formats lf on b.literary_format_id = lf.id " +
-                "WHERE b.id = ?;";
+                "WHERE b.id = ? AND b.is_deleted = FALSE;";
         Book book = null;
         try (Connection connection = ConnectionUtil.getConnection();
              PreparedStatement getBookStatement = connection
-//                     .prepareStatement(selectRequest, Statement.RETURN_GENERATED_KEYS)
                      .prepareStatement(selectRequest)
         ) {
             getBookStatement.setLong(1, id);
-//            ResultSet resultSet = getBookStatement.getGeneratedKeys();
             ResultSet resultSet = getBookStatement.executeQuery();
             if (resultSet.next()) {
                 book = parseBookWithLiteraryFormatResultSet(resultSet);
             }
         } catch (SQLException e) {
-            throw new RuntimeException("Can't insert book to DB", e);
+            throw new RuntimeException("Can't get book from DB", e);
         }
         if (book != null) {
             book.setAuthors(getAuthorsForBook(id));
         }
+        return book;
+    }
+
+    @Override
+    public boolean delete(Long bookId) {
+        String deleteBookQuery = "UPDATE books SET is_deleted = TRUE WHERE id = ?;";
+        try (Connection connection = ConnectionUtil.getConnection();
+             PreparedStatement softDeleteBookStatement = connection
+                     .prepareStatement(deleteBookQuery)
+        ) {
+            softDeleteBookStatement.setLong(1, bookId);
+            int numberOfDeletedRows = softDeleteBookStatement.executeUpdate();
+            return numberOfDeletedRows != 0;
+        } catch (SQLException e) {
+            throw new RuntimeException("Can't delete book with id: " + bookId, e);
+        }
+    }
+
+    @Override
+    public Book update(Book book) {
+        // 1. update books fields
+        // 2. delete all relations in book_authors table where bookId = book.getId()
+        // 3. add new relations to the book_authors table
         return book;
     }
 
@@ -90,15 +126,15 @@ public class BookDaoImpl implements BookDao {
             ResultSet resultSet = getAllAuthorsStatement.executeQuery();
             List<Author> authors = new ArrayList<>();
             while (resultSet.next()) {
-                authors.add(parseAuthorsFromResultset(resultSet));
+                authors.add(parseAuthorsFromResultSet(resultSet));
             }
             return authors;
         } catch (SQLException e) {
-            throw new RuntimeException("Can't insert book to DB", e);
+            throw new RuntimeException("Can't get book authors", e);
         }
     }
 
-    private Author parseAuthorsFromResultset(ResultSet resultSet) throws SQLException {
+    private Author parseAuthorsFromResultSet(ResultSet resultSet) throws SQLException {
         Author author = new Author();
         author.setId(resultSet.getObject("id", Long.class));
         author.setName(resultSet.getString("name"));

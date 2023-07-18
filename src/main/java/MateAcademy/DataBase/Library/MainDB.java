@@ -4,7 +4,6 @@ package MateAcademy.DataBase.Library;
 import MateAcademy.DataBase.Library.lib.Injector;
 import MateAcademy.DataBase.Library.models.Book;
 import MateAcademy.DataBase.Library.service.BookService;
-import MateAcademy.DataBase.Library.service.LiteraryFormatService;
 
 public class MainDB {
     private static Injector injector = Injector.getInstance("MateAcademy.DataBase.Library");
