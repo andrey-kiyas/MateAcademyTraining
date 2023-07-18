@@ -34,10 +34,10 @@ public class LiteraryFormat {
 
     @Override
     public String toString() {
-        return "LiteraryFormat{" +
-                "id=" + id +
-                ", format='" + format + '\'' +
-                ", isDeleted=" + isDeleted +
-                '}';
+        return "LiteraryFormat{"
+                + "id=" + id
+                + ", format='" + format + '\''
+                + ", isDeleted=" + isDeleted
+                + '}';
     }
 }

@@ -1,16 +1,16 @@
-package MateAcademy.DataBase.Library2.dao;
+package MateAcademy.DataBase.Library.service;
 
-import MateAcademy.DataBase.Library2.models.LiteraryFormat;
+import MateAcademy.DataBase.Library.models.LiteraryFormat;
 import java.util.List;
 
-public interface LiteraryFormatDao {
+public interface LiteraryFormatService {
     List<LiteraryFormat> getAll();
 
     LiteraryFormat create(LiteraryFormat format);
 
-    boolean delete(Long id);
-
     LiteraryFormat get(Long id);
 
     LiteraryFormat update(LiteraryFormat format);
+
+    boolean delete(Long id);
 }

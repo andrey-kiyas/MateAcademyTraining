@@ -1,6 +1,6 @@
-package MateAcademy.DataBase.Library2.service;
+package MateAcademy.DataBase.LibraryInjector.service;
 
-import MateAcademy.DataBase.Library2.models.LiteraryFormat;
+import MateAcademy.DataBase.LibraryInjector.models.LiteraryFormat;
 import java.util.List;
 
 public interface LiteraryFormatService {

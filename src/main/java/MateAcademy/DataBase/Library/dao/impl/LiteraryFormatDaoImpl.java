@@ -1,8 +1,9 @@
-package MateAcademy.DataBase.Library2.dao;
+package MateAcademy.DataBase.Library.dao.impl;
 
-import MateAcademy.DataBase.Library2.lib.Dao;
-import MateAcademy.DataBase.Library2.models.LiteraryFormat;
-import MateAcademy.DataBase.Library2.util.ConnectionUtil;
+import MateAcademy.DataBase.Library.dao.LiteraryFormatDao;
+import MateAcademy.DataBase.Library.lib.Dao;
+import MateAcademy.DataBase.Library.models.LiteraryFormat;
+import MateAcademy.DataBase.Library.util.ConnectionUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -74,11 +75,47 @@ public class LiteraryFormatDaoImpl implements LiteraryFormatDao {
 
     @Override
     public LiteraryFormat get(Long id) {
-        return null;
+        String query = "SELECT * FROM literary_formats"
+                + " WHERE id = ? AND is_deleted = FALSE;";
+        try (Connection connection = ConnectionUtil.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setLong(1, id);
+            ResultSet resultSet = statement.executeQuery();
+            LiteraryFormat literaryFormat = null;
+            if (resultSet.next()) {
+                literaryFormat = getLiteraryFormat(resultSet);
+            }
+            return literaryFormat;
+        } catch (SQLException e) {
+            throw new RuntimeException("Couldn't get manufacturer by id " + id, e);
+        }
     }
 
     @Override
     public LiteraryFormat update(LiteraryFormat format) {
-        return null;
+        String query = "UPDATE literary_formats SET format = ?"
+                + " WHERE id = ? AND is_deleted = FALSE;";
+        try (Connection connection = ConnectionUtil.getConnection();
+             PreparedStatement statement
+                     = connection.prepareStatement(query)) {
+            statement.setString(1, format.getFormat());
+            statement.setLong(2, format.getId());
+            statement.executeUpdate();
+            return format;
+        } catch (SQLException e) {
+            throw new RuntimeException("Couldn't update a manufacturer "
+                    + format, e);
+        }
+    }
+
+    private LiteraryFormat getLiteraryFormat(ResultSet resultSet) throws SQLException {
+        Long id = resultSet.getObject("id", Long.class);
+        String format = resultSet.getString("format");
+        boolean isDeleted = resultSet.getObject("is_deleted", Boolean.class);
+        LiteraryFormat literaryFormat = new LiteraryFormat();
+        literaryFormat.setId(id);
+        literaryFormat.setFormat(format);
+        literaryFormat.setDeleted(isDeleted);
+        return literaryFormat;
     }
 }

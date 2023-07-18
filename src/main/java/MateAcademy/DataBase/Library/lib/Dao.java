@@ -1,4 +1,4 @@
-package MateAcademy.DataBase.Library2.lib;
+package MateAcademy.DataBase.Library.lib;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

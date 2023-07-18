@@ -1,8 +1,5 @@
-package MateAcademy.DataBase.Library2.util;
+package MateAcademy.DataBase.Library.lib;
 
-import MateAcademy.DataBase.Library2.lib.Dao;
-import MateAcademy.DataBase.Library2.lib.Inject;
-import MateAcademy.DataBase.Library2.lib.Service;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Constructor;

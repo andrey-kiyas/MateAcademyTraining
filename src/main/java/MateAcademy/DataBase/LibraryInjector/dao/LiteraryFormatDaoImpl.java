@@ -1,7 +1,8 @@
-package MateAcademy.DataBase.Library.dao;
+package MateAcademy.DataBase.LibraryInjector.dao;
 
-import MateAcademy.DataBase.Library.models.LiteraryFormat;
-import MateAcademy.DataBase.Library.util.ConnectionUtil;
+import MateAcademy.DataBase.LibraryInjector.lib.Dao;
+import MateAcademy.DataBase.LibraryInjector.models.LiteraryFormat;
+import MateAcademy.DataBase.LibraryInjector.util.ConnectionUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,6 +11,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+@Dao
 public class LiteraryFormatDaoImpl implements LiteraryFormatDao {
     @Override
     public List<LiteraryFormat> getAll() {
@@ -68,5 +70,15 @@ public class LiteraryFormatDaoImpl implements LiteraryFormatDao {
         } catch (SQLException e) {
             throw new RuntimeException("Can't insert format to DB", e);
         }
+    }
+
+    @Override
+    public LiteraryFormat get(Long id) {
+        return null;
+    }
+
+    @Override
+    public LiteraryFormat update(LiteraryFormat format) {
+        return null;
     }
 }

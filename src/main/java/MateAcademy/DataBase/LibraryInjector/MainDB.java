@@ -1,7 +1,7 @@
-package MateAcademy.DataBase.Library2;
+package MateAcademy.DataBase.LibraryInjector;
 
-import MateAcademy.DataBase.Library2.service.LiteraryFormatService;
-import MateAcademy.DataBase.Library2.util.Injector;
+import MateAcademy.DataBase.LibraryInjector.service.LiteraryFormatService;
+import MateAcademy.DataBase.LibraryInjector.util.Injector;
 
 public class MainDB {
     private static Injector injector = Injector.getInstance("MateAcademy.DataBase.Library2");

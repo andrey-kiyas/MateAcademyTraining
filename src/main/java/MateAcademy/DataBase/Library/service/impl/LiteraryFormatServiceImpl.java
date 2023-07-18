@@ -1,10 +1,10 @@
-package MateAcademy.DataBase.Library2.service.impl;
+package MateAcademy.DataBase.Library.service.impl;
 
-import MateAcademy.DataBase.Library2.dao.LiteraryFormatDao;
-import MateAcademy.DataBase.Library2.lib.Inject;
-import MateAcademy.DataBase.Library2.lib.Service;
-import MateAcademy.DataBase.Library2.models.LiteraryFormat;
-import MateAcademy.DataBase.Library2.service.LiteraryFormatService;
+import MateAcademy.DataBase.Library.dao.LiteraryFormatDao;
+import MateAcademy.DataBase.Library.lib.Inject;
+import MateAcademy.DataBase.Library.lib.Service;
+import MateAcademy.DataBase.Library.models.LiteraryFormat;
+import MateAcademy.DataBase.Library.service.LiteraryFormatService;
 import java.util.List;
 
 @Service
@@ -25,18 +25,15 @@ public class LiteraryFormatServiceImpl implements LiteraryFormatService {
     @Override
     public LiteraryFormat get(Long id) {
         return literaryFormatDao.get(id);
-//        return null;
     }
 
     @Override
     public LiteraryFormat update(LiteraryFormat format) {
-//        return null;
         return literaryFormatDao.update(format);
     }
 
     @Override
     public boolean delete(Long id) {
-//        return false;
         return literaryFormatDao.delete(id);
     }
 }
