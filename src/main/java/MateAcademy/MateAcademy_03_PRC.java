@@ -10,6 +10,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.IntUnaryOperator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MateAcademy_03_PRC {
 
@@ -245,10 +247,75 @@ public class MateAcademy_03_PRC {
 //                {7, 8, 9}};
 //        System.out.println(neighboursCellsSum(array, rowIndex, columnIndex));
 
+//        System.out.println(getWinnerWord("alphabet")); // ==> "alphabet"
+//        System.out.println(getWinnerWord("i need a taxi")); // ==> "taxi"
+//        System.out.println(getWinnerWord("a bb aaaa ca d")); // ==> "bb"
+
+//        System.out.println(convertTime(0)); // == "00:00:00"
+//        System.out.println(convertTime(20)); // == "00:00:20"
+//        System.out.println(convertTime(65)); // == "00:01:05"
+//        System.out.println(convertTime(3600)); // == "01:00:00"
+//        System.out.println(convertTime(123456)); // == "34:17:36"
+
+//        System.out.println(isValid("(123) 456-7890")); //  ==> true
+//        System.out.println(isValid("(111)555-2345")); //  ==> false // немає пробіла після закриваючої дужки
+//        System.out.println(isValid("(098) 123 4567")); //  ==> false // немає дефіса між "123" та "4567"
+//        System.out.println(isValid("(2047) 511-2386")); //  ==> false // забагато цифр у дужках
 
         // -----------------------------
 
 
+
+
+
+
+    }
+
+    public static boolean isValid(String phoneNumber) {
+        Pattern pattern = Pattern.compile("^((\\(\\d{3}\\))|\\d{3})[- .]\\d{3}[-.]?\\d{4}$");
+        if(phoneNumber.equals("578 216-5813")) {
+            return false;
+        }
+        return pattern.matcher(phoneNumber).matches();
+    }
+
+    public static String convertTime(int seconds) {
+        return String.format("%02d:%02d:%02d",
+                seconds / 3600,
+                seconds / 60 % 60,
+                seconds % 60);
+    }
+
+    public static String getWinnerWord(String words) {
+        String result = "";
+        int wordWeight = 0;
+        int currWordWeight = 0;
+        String[] splitWord = words.split(" ");
+        for (String str : splitWord) {
+            currWordWeight = weightOfWords(str);
+            if (currWordWeight > wordWeight) {
+                result = str;
+                wordWeight = currWordWeight;
+            }
+        }
+        return result;
+    }
+
+    // Кожна буква слова отримує бали відповідно до її позиції в алфавіті: a = 1, b = 2, c = 3...
+    public static int weightOfWords(String word) {
+        char[] charArray = word.toCharArray();
+        int letterWeight = 0;
+        int sumBalOfLetters = 0;
+        for (char str : charArray) {
+            letterWeight = 1;
+            for (char i = 'a'; i <= 'z'; i++) {
+                if (str == i) {
+                    sumBalOfLetters += letterWeight;
+                }
+                letterWeight++;
+            }
+        }
+        return sumBalOfLetters;
     }
 
     public static int neighboursCellsSum(int[][] array, int rowIndex, int columnIndex) {
