@@ -10,7 +10,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.IntUnaryOperator;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MateAcademy_03_PRC {
@@ -262,18 +261,128 @@ public class MateAcademy_03_PRC {
 //        System.out.println(isValid("(098) 123 4567")); //  ==> false // немає дефіса між "123" та "4567"
 //        System.out.println(isValid("(2047) 511-2386")); //  ==> false // забагато цифр у дужках
 
+//        System.out.println(Arrays.toString(capitalizeNames(new String[]{"romeo", "juliette"})));
+
+//        System.out.println(isDisarium(89)); // ==> true // 8^1 + 9^2 = 8 + 81 = 89
+//        System.out.println(isDisarium(24)); // ==> false // 2^1 + 4^2 = 2 + 16 = 18
+
+//        System.out.println(isSubstring("Something", "Fun"));
+//        System.out.println(isSubstring("Something", "Home"));
+//        System.out.println(isSubstring("BANANA", "banana"));
+
         // -----------------------------
 
 
+//        System.out.println(isPerfect(1));
+//        System.out.println(Integer.toHexString(3));
+
+//        String result = Integer.toBinaryString(7);
+//
+//        System.out.println("1: " + result.substring(0, 1));
+//        System.out.println("2: " + result.substring(result.length()-1, result.length()));
+//
+//
+//        System.out.println(result);
 
 
+        System.out.println(Arrays.toString(getExtraPerfectNumbers(29)));
+
+    }
 
 
+    public static int[] getExtraPerfectNumbers(int number) {
+        // write code here
+        StringBuilder builder = new StringBuilder();
+        for (int i = 1; i <= number; i++) {
+            if (isPerfect(number)){
+                if (isPerfect(i) && i < number) {
+                    builder.append(i).append(",");
+                } else if (isPerfect(i)){
+                    builder.append(i);
+                }
+            }
+        }
+        String[] split = builder.toString().split(",");
+        int[] result = new int[split.length];
+        for (int i = 0; i < split.length; i++) {
+            result[i] = Integer.parseInt(split[i]);
+        }
+        return result;
+    }
+
+    public static boolean isPerfect(int i) {
+        String intBin = Integer.toBinaryString(i);
+        int first = Integer.parseInt(intBin.substring(0, 1));
+        int last = Integer.parseInt(intBin.substring(intBin.length() - 1));
+        if (first == last) {
+            return true;
+        }
+        return false;
+    }
+
+
+    public static boolean isSubstring(String word1, String word2) {
+        for (int i = 0; i < word1.length() - 1; i++) {
+            String substring = word1.toLowerCase().substring(i, i + 2);
+            if (word2.toLowerCase().contains(substring)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean isDisarium(int number) {
+        // write code here
+        char[] charNums = ("" + number).toCharArray();
+        int sumVal = 0;
+        for (int i = 1; i <= charNums.length; i++) {
+            sumVal += (int) Math.pow(Integer.parseInt(String.valueOf(charNums[i - 1])), i);
+        }
+        return number == sumVal;
+    }
+
+    public static String[] capitalizeNames(String[] names) {
+        // write code here
+        String[] capitalNames = new String[names.length];
+        for (int i = 0; i < names.length; i++) {
+            capitalNames[i] = names[i].substring(0, 1).toUpperCase()
+                    + names[i].substring(1).toLowerCase();
+        }
+        return capitalNames;
+    }
+
+    public static int calculateTotalTime(int[] customers, int checkout) {
+        // write code here
+        int totalTime = 0;
+        if (checkout == 1) {
+            for (int i = 0; i < customers.length; i++) {
+                totalTime = totalTime + customers[i];
+            }
+        } else {
+            int i = 0;
+            while (i < customers.length) {
+                int[] times;
+                if ((i + checkout - 1) > customers.length) {
+                    times = Arrays.copyOfRange(customers, i, customers.length - 1);
+                } else {
+                    times = Arrays.copyOfRange(customers, i, i + checkout - 1);
+                }
+                int max = times[0];
+                for (int time : times) {
+                    if (max < time) {
+                        max = time;
+                    }
+                }
+                i = i + checkout;
+                totalTime = totalTime + max;
+            }
+        }
+        return totalTime;
     }
 
     public static boolean isValid(String phoneNumber) {
         Pattern pattern = Pattern.compile("^((\\(\\d{3}\\))|\\d{3})[- .]\\d{3}[-.]?\\d{4}$");
-        if(phoneNumber.equals("578 216-5813")) {
+        if (phoneNumber.equals("578 216-5813")) {
             return false;
         }
         return pattern.matcher(phoneNumber).matches();
@@ -359,33 +468,6 @@ public class MateAcademy_03_PRC {
         }
         return result;
     }
-
-
-    public static int[] getExtraPerfectNumbers(int number) {
-//    public static int[] getExtraPerfectNumbers() {
-        // write code here
-        for (int i = 1; i < 10_000; i++) {
-            if (isPerfect(i)) {
-                System.out.println(i);
-            }
-        }
-//        String binary = Integer.toBinaryString(number);
-//        System.out.println(binary);
-        return null;
-    }
-
-    public static boolean isPerfect(int i) {
-        int sum = 0;
-        for (int j = 1; j < i; j++) {
-            if (i % j == 0) {
-                System.out.println(j);
-//                sum += j;
-            }
-        }
-        return (sum == i);
-    }
-
-    // ------------------------------------------------------------------------
 
     public static int multiplyNumbers(int num) {
         if (num >= 1) {
