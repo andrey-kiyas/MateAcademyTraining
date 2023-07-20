@@ -289,7 +289,6 @@ public class MateAcademy_03_PRC {
 
     }
 
-
     public static int[] getExtraPerfectNumbers(int number) {
         // write code here
         StringBuilder builder = new StringBuilder();
@@ -319,7 +318,6 @@ public class MateAcademy_03_PRC {
         }
         return false;
     }
-
 
     public static boolean isSubstring(String word1, String word2) {
         for (int i = 0; i < word1.length() - 1; i++) {
