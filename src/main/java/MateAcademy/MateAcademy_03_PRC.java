@@ -270,23 +270,57 @@ public class MateAcademy_03_PRC {
 //        System.out.println(isSubstring("Something", "Home"));
 //        System.out.println(isSubstring("BANANA", "banana"));
 
+//        System.out.println(Arrays.toString(getExtraPerfectNumbers(29)));
+
+//        System.out.println(getBackwardsPrimes(1, 73));
+
         // -----------------------------
 
 
-//        System.out.println(isPerfect(1));
-//        System.out.println(Integer.toHexString(3));
+    }
 
-//        String result = Integer.toBinaryString(7);
-//
-//        System.out.println("1: " + result.substring(0, 1));
-//        System.out.println("2: " + result.substring(result.length()-1, result.length()));
-//
-//
-//        System.out.println(result);
+    public static String getBackwardsPrimes(long start, long end) {
+        // write code here
+        StringBuilder result = new StringBuilder();
+        StringBuilder reverser = new StringBuilder();
+        for (int i = (int) start; i <= end; i++) {
+            int reversed = Integer.parseInt(reverser.append(i).reverse().toString());
+            BigInteger bigInteger = BigInteger.valueOf(i);
+            BigInteger reversedInteger = BigInteger.valueOf(reversed);
+            if (!bigInteger.equals(reversedInteger)) {
+                boolean isBackwardsReadPrime = bigInteger.isProbablePrime((int) Math.log(i))
+                        && reversedInteger.isProbablePrime((int) Math.log(reversed));
+                if (isBackwardsReadPrime) {
+                    result.append(i).append(" ");
+                }
+            }
+            reverser.setLength(0);
+        }
+        return result.toString().trim();
+    }
 
+    // число в обратном порядке
+    private static long backwardsInt(int number) {
+        int reversed = 0;
+        while (number != 0) {
+            int digit = number % 10;
+            reversed = reversed * 10 + digit;
+            number /= 10;
+        }
+        return reversed;
+    }
 
-        System.out.println(Arrays.toString(getExtraPerfectNumbers(29)));
-
+    // проверка простого числа
+    private static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        for (int i = 2; i * i <= number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static int[] getExtraPerfectNumbers(int number) {
