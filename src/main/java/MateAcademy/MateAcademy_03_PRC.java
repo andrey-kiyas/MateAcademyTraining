@@ -294,10 +294,10 @@ public class MateAcademy_03_PRC {
         // write code here
         StringBuilder builder = new StringBuilder();
         for (int i = 1; i <= number; i++) {
-            if (isPerfect(number)){
+            if (isPerfect(number)) {
                 if (isPerfect(i) && i < number) {
                     builder.append(i).append(",");
-                } else if (isPerfect(i)){
+                } else if (isPerfect(i)) {
                     builder.append(i);
                 }
             }
