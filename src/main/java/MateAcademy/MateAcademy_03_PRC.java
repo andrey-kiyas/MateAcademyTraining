@@ -274,9 +274,26 @@ public class MateAcademy_03_PRC {
 
 //        System.out.println(getBackwardsPrimes(1, 73));
 
+//        System.out.println(removeLetter("abracadabra", 1)); // = "bracadabra" // видаляється найлівіша буква 'a'
+//        System.out.println(removeLetter("abracadabra", 2)); // = "brcadabra" // видаляється 2 букви 'a' зліва
+//        System.out.println(removeLetter("abracadabra", 6)); // = "rcdbr" // видаляється 5 букв 'a' та 1 буква 'b'
+//        System.out.println(removeLetter("abracadabra", 8)); // = "rdr" // видаляється 5 букв 'a', 2 букви 'b' та 1 буква 'c'
+//        System.out.println(removeLetter("abracadabr", 10)); // = ""
+
         // -----------------------------
 
 
+    }
+
+    public static String removeLetter(String string, int n) {
+        // write code here
+        String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        for (String letter : alphabet.split("")) {
+            while (!string.isEmpty() && string.contains(letter) && n-- > 0) {
+                string = string.replaceFirst(letter, "");
+            }
+        }
+        return string;
     }
 
     public static String getBackwardsPrimes(long start, long end) {
