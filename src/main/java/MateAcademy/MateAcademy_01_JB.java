@@ -171,6 +171,7 @@ public class MateAcademy_01_JB {
         neighboursCellsSum += array[rowIndex][columnIndex + 1];
         return neighboursCellsSum;
     }
+
     // вариант мой
     public static int getNeighboursCells(int[][] array, int rowIndex, int columnIndex) {
         int rowLength = array.length - 1;

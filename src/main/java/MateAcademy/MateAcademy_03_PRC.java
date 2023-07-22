@@ -281,8 +281,27 @@ public class MateAcademy_03_PRC {
 //        System.out.println(removeLetter("abracadabr", 10)); // = ""
 
         // -----------------------------
+/**
+ * Реалізуй метод getSumConsecutives(), який приймає список з цілими числами і повертає список з сумою однакових і послідовних чисел.
+ *
+ * Решта чисел зі списку залишаються без змін.
+ *
+ * Приклади:
+ *
+ * [1, 4, 4, 4, 0, 4, 3, 3, 1] // повертає [1, 12, 0, 4, 6, 1]
+ * // сума трьох послідовних четвірок дорівнює 12, сума двох послідовних трійок дорівнює 6
+ *
+ * [1, 1, 7, 7, 3] // повертає [2, 14, 3]
+ * [-5, -5, 7, 7, 12, 0] // повертає [-10, 14, 12, 0]
+ */
 
 
+
+    }
+
+    public static List<Integer> getSumConsecutives(List<Integer> list) {
+        // write code here
+        return null;
     }
 
     public static String removeLetter(String string, int n) {
