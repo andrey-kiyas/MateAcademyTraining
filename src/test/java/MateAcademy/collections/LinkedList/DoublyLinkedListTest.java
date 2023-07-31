@@ -13,13 +13,13 @@ public class DoublyLinkedListTest {
     ListNode value2 = new ListNode(2);
     DoublyLinkedList.insertNode(value1, value2);
     Assert.assertEquals("The next value for 1 should be 2 if the head = [1, 3], previous = 1 and newNode = 2\n",
-      2, value1.next.value);
+            2, value1.next.value);
     Assert.assertEquals("The previous value for 2 should be 1 if the head = [1, 3], previous = 1 and newNode = 2\n",
-      1, value2.prev.value);
+            1, value2.prev.value);
     Assert.assertEquals("The next value for 2 should be 3 if the head = [1, 3], previous = 1 and newNode = 2\n",
-      3, value2.next.value);
+            3, value2.next.value);
     Assert.assertEquals("The previous value for 3 should be 2 if the head = [1, 3], previous = 1 and newNode = 2\n",
-      2, value3.prev.value);
+            2, value3.prev.value);
   }
 
   @Test
@@ -31,13 +31,13 @@ public class DoublyLinkedListTest {
     ListNode value2 = new ListNode(0);
     DoublyLinkedList.insertNode(value1, value2);
     Assert.assertEquals("The next value for 20 should be 0 if the head = [20, 71], previous = 20 and newNode = 0\n",
-      0, value1.next.value);
+            0, value1.next.value);
     Assert.assertEquals("The previous value for 0 should be 20 if the head = [20, 71], previous = 20 and newNode = 0\n",
-      20, value2.prev.value);
+            20, value2.prev.value);
     Assert.assertEquals("The next value for 0 should be 71 if the head = [20, 71], previous = 20 and newNode = 0\n",
-      71, value2.next.value);
+            71, value2.next.value);
     Assert.assertEquals("The previous value for 71 should be 0 if the head = [20, 71], previous = 20 and newNode = 0\n",
-      0, value3.prev.value);
+            0, value3.prev.value);
   }
 
   @Test
@@ -49,13 +49,13 @@ public class DoublyLinkedListTest {
     ListNode value2 = new ListNode(-492);
     DoublyLinkedList.insertNode(value1, value2);
     Assert.assertEquals("The next value for -3 should be -492 if the head = [-3, -10], previous = -3 and newNode = -492\n",
-      -492, value1.next.value);
+            -492, value1.next.value);
     Assert.assertEquals("The previous value for -492 should be -3 if the head = [-3, -10], previous = -3 and newNode = -492\n",
-      -3, value2.prev.value);
+            -3, value2.prev.value);
     Assert.assertEquals("The next value for -492 should be -10 if the head = [-3, -10], previous = -3 and newNode = -492\n",
-      -10, value2.next.value);
+            -10, value2.next.value);
     Assert.assertEquals("The previous value for -10 should be -492 if the head = [-3, -10], previous = -3 and newNode = -492\n",
-      -492, value3.prev.value);
+            -492, value3.prev.value);
   }
 
   @Test
@@ -70,13 +70,13 @@ public class DoublyLinkedListTest {
     ListNode value3 = new ListNode(238);
     DoublyLinkedList.insertNode(value2, value3);
     Assert.assertEquals("The next value for -17 should be 238 if the head = [5, -17, 32], previous = -17 and newNode = 238\n",
-      238, value2.next.value);
+            238, value2.next.value);
     Assert.assertEquals("The previous value for 238 should be -17 if the head = [5, -17, 32], previous = -17 and newNode = 238\n",
-      -17, value3.prev.value);
+            -17, value3.prev.value);
     Assert.assertEquals("The next value for 238 should be 32 if the head = [5, -17, 32], previous = -17 and newNode = 238\n",
-      32, value3.next.value);
+            32, value3.next.value);
     Assert.assertEquals("The previous value for 32 should be 238 if the head = [5, -17, 32], previous = -17 and newNode = 238\n",
-      238, value4.prev.value);
+            238, value4.prev.value);
   }
 
   @Test
@@ -93,16 +93,16 @@ public class DoublyLinkedListTest {
     DoublyLinkedList.insertNode(value2, value3);
     DoublyLinkedList.insertNode(value3, value4);
     Assert.assertEquals("The next value for -25 should be 11 if the head = [490, -25, 81] and nodes 11 and 4 are inserted after node -25\n",
-      11, value2.next.value);
+            11, value2.next.value);
     Assert.assertEquals("The previous value for 11 should be -25 if the head = [490, -25, 81] and nodes 11 and 4 are inserted after node -25\n",
-      -25, value3.prev.value);
+            -25, value3.prev.value);
     Assert.assertEquals("The next value for 11 should be 4 if the head = [490, -25, 81] and nodes 11 and 4 are inserted after node -25\n",
-      4, value3.next.value);
+            4, value3.next.value);
     Assert.assertEquals("The previous value for 4 should be 11 if the head = [490, -25, 81] and nodes 11 and 4 are inserted after node -25\n",
-      11, value4.prev.value);
+            11, value4.prev.value);
     Assert.assertEquals("The next value for 4 should be 81 if the head = [490, -25, 81] and nodes 11 and 4 are inserted after node -25\n",
-      81, value4.next.value);
+            81, value4.next.value);
     Assert.assertEquals("The previous value for 81 should be 4 if the head = [490, -25, 81] and nodes 11 and 4 are inserted after node -25\n",
-      4, value5.prev.value);
+            4, value5.prev.value);
   }
 }

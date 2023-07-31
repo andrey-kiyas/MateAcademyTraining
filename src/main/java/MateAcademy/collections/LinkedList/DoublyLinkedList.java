@@ -25,4 +25,3 @@ public class DoublyLinkedList {
 //        Output: [4, 1, 5, 9]
 //        Explanation: You are given the previous node with value 1 and a new node with value 5
 //        the linked list should become 4 ⇆ 1 ⇆ 5 ⇆ 9 after calling your method
-
