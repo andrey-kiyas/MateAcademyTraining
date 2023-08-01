@@ -51,6 +51,12 @@ public class MateAcademy_04_ELSE {
         // -----------------------------
 
 
+        Long num = 100100111000000L;
+        int decimal=Integer.parseInt(String.valueOf(num),2);
+        System.out.println(decimal);
+
+
+
     }
 
     public static boolean isValidCardNumber(String cardNumber) {
