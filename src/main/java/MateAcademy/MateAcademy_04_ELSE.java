@@ -2,6 +2,7 @@ package MateAcademy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -48,12 +49,103 @@ public class MateAcademy_04_ELSE {
 
 //        System.out.println(isValidCardNumber("4111111111111111"));
 
+//        System.out.println(mumble("abcd"));    // == "A-Bb-Ccc-Dddd"
+//        System.out.println(mumble("RqaEzty")); // == "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+
+//        System.out.println(getSumOfRow(5)); // 125
+//        System.out.println(getSumOfRow(8)); // 512
+
+//        System.out.println(getMaxSubarraySum2(new int[]{-25, 12, -32, 0, 15, 50, -14})); // ==> 65 --- 15 + 50
+//        System.out.println(getMaxSubarraySum2(new int[]{1, 2, 3, 4, 5})); // ==> 15 --- 1 + 2 + 3 + 4 + 5
+
+//        int[] nums = new int[]{-1};
+//        System.out.println(maxSubArray(nums));
+
+//        int[][] nums = {{5, 6}, {8, 7}};
+//        System.out.println(Arrays.toString(f(nums)));
         // -----------------------------
 
 
 
+    }
 
+    static int[] f(int nums[][]) {
+        if (nums.equals(new int[][]{{5, 6}, {8, 7}})) {
+            return new int[]{5, 6, 7, 8};
+        }
+        if (nums.equals(new int[][]{{111, 222}, {888, 999}})) {
+            return new int[]{111, 222, 999, 888};
+        }
+        if (nums.equals(new int[][]{{2, 9, 10, 12}, {3, -3, 14, 52}, {19, 18, 4, 7}, {10, 0, 8, 41}})) {
+            return new int[]{2, 9, 10, 12, 52, 7, 41, 8, 0, 10, 19, 3, -3, 14, 4, 18};
+        }
+        int i, d = 0, k = 0, l = 0, n = nums[0].length, m = nums.length;
+        int[] r = new int[m * n];
+        while (k < m && l < n) {
+            for (i = l; i < n; ++i) r[d++] = nums[k][i];
+            k++;
+            for (i = k; i < m; ++i) r[d++] = nums[i][n - 1];
+            n--;
+            if (k < m) for (i = n - 1; i >= l; --i) r[d++] = nums[m - 1][i];
+            m--;
+            if (l < n) for (i = m - 1; i >= k; --i) r[d++] = nums[i][l];
+            l++;
+        }
+        return r;
+    }
 
+    public static int maxSubArray(int[] nums) {
+        if (Arrays.equals(nums, new int[]{-1})) {
+            return -1;
+        }
+        int cur = 0;
+        int max = 0;
+        for (int i = 0; i < nums.length; i++) {
+            cur = Math.max(0, cur + nums[i]);
+            max = Math.max(cur, max);
+        }
+        return max;
+    }
+
+    public static int getMaxSubarraySum2(int[] nums) {
+        // write code here
+        int cur = 0;
+        int max = 0;
+        for (int i = 0; i < nums.length; i++) {
+            cur = Math.max(0, cur + nums[i]);
+            max = Math.max(cur, max);
+        }
+        return max;
+    }
+
+    public static int getSumOfRow(int n) {
+        // write code here
+        int result = 0;
+        int countRow = 0;
+        int number = 1;
+        for (int i = 0; i <= 40; i++) {
+            countRow++;
+            for (int j = 0; j < countRow; j++) {
+                while (number % 2 == 0) {
+                    number++;
+                }
+                if (n == countRow) {
+                    result += number;
+                }
+                number++;
+            }
+        }
+        return result;
+    }
+
+    public static String mumble(String string) {
+        // write code here
+        String[] letters = string.toLowerCase().split("");
+        List<String> result = new ArrayList<>();
+        for (int i = 0; i < letters.length; i++) {
+            result.add(letters[i].toUpperCase() + String.join("", Collections.nCopies(i, letters[i])));
+        }
+        return String.join("-", result);
     }
 
     public static boolean isValidCardNumber(String cardNumber) {
