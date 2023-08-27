@@ -7,6 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import org.apache.commons.lang3.StringUtils;
 
 public class MateAcademy_04_ELSE {
     public static void main(String[] args) {
@@ -63,10 +64,22 @@ public class MateAcademy_04_ELSE {
 
 //        int[][] nums = {{5, 6}, {8, 7}};
 //        System.out.println(Arrays.toString(f(nums)));
+
+//        System.out.println(removeDuplicates("only unique words"));                    // ==> "only unique words"
+//        System.out.println(removeDuplicates("remove all duplicates all duplicates")); // ==> "remove all duplicates"
+//        System.out.println(removeDuplicates("java java java"));                       // ==> "java"
         // -----------------------------
 
 
+    }
 
+    public static String removeDuplicates(String text) {
+        // write code here
+        String[] textSplit = text.split(" ");
+        List<String> collect = Arrays.stream(textSplit)
+                .distinct()
+                .collect(Collectors.toList());
+        return StringUtils.join(collect, " ");
     }
 
     static int[] f(int nums[][]) {
