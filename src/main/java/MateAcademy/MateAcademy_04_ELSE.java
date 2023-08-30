@@ -71,6 +71,13 @@ public class MateAcademy_04_ELSE {
         // -----------------------------
 
 
+
+        String str = "01203";
+
+        char[] charArray = str.toCharArray();
+
+        System.out.println(Arrays.toString(charArray));
+
     }
 
     public static String removeDuplicates(String text) {
@@ -241,7 +248,6 @@ public class MateAcademy_04_ELSE {
         // write code here
         return address.replace(".", "[.]");
     }
-
 
     public static String toSimplePigLatin(String string) {
         // write code here
