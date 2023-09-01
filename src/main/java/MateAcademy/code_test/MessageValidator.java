@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 
 public class MessageValidator {
     public static void main(String[] args) {
-//        System.out.println(isValidMessage("3hey5hello2hid"));
         System.out.println(isValidMessage("2ey1h"));
     }
 
@@ -27,8 +26,6 @@ public class MessageValidator {
         }
         return true;
     }
-
-
 
     public static boolean isValidMessage1(String message) {
         int digit = 0;
@@ -57,39 +54,5 @@ public class MessageValidator {
             }
         }
         return true;
-    }
-
-    public static boolean isValidMessage2(String message) {
-        if (message.equals("")) {
-            return true;
-        }
-        if (message.equals("0")) {
-            return true;
-        }
-        if (message.equals("1a")) {
-            return true;
-        }
-        if (message.equals("2aa3bb")) {
-            return false;
-        }
-        if (message.equals("2aa3bbb")) {
-            return true;
-        }
-        if (message.equals("3hey5hello2hi5")) {
-            return false;
-        }
-        if (message.equals("code4hello5")) {
-            return false;
-        }
-        if (message.equals("3hey5hello2hi")) {
-            return true;
-        }
-        if (message.equals("11mateacademy")) {
-            return true;
-        }
-        if (message.equals("1a2bb3ccc4dddd5eeeeee")) {
-            return false;
-        }
-        return false;
     }
 }
