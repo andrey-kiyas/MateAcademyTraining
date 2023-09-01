@@ -63,6 +63,32 @@ public class Passphrase {
     }
 
     public static String createPassphrase2(String phrase, int shift) {
-        return null;
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < phrase.length(); i++) {
+            char ch = phrase.charAt(i);
+            if (Character.isLetter(ch)) {
+                if (i % 2 == 0) {
+                    ch = String.valueOf(ch).toUpperCase().charAt(0);
+                    if (ch + shift > 90) {
+                        ch += shift - 26;
+                    } else {
+                        ch += shift;
+                    }
+                } else {
+                    ch = String.valueOf(ch).toLowerCase().charAt(0);
+                    if (ch + shift > 122) {
+                        ch += shift - 26;
+                    } else {
+                        ch += shift;
+                    }
+                }
+                result.append(ch);
+            } else if (Character.isDigit(ch)) {
+                result.append(9 - Integer.parseInt(String.valueOf(ch)));
+            } else {
+                result.append(ch);
+            }
+        }
+        return result.reverse().toString();
     }
 }
