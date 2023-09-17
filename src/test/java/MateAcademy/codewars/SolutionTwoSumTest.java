@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-class TwoSumTest {
+class SolutionTwoSumTest {
     static Stream<Arguments> basicTests() {
         return Stream.of(
                 arguments(new int[]{1,2,3},          4,     new int[]{0,2}),
