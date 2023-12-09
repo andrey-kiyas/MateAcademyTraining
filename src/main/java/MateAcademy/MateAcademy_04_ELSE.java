@@ -68,16 +68,31 @@ public class MateAcademy_04_ELSE {
 //        System.out.println(removeDuplicates("only unique words"));                    // ==> "only unique words"
 //        System.out.println(removeDuplicates("remove all duplicates all duplicates")); // ==> "remove all duplicates"
 //        System.out.println(removeDuplicates("java java java"));                       // ==> "java"
+
+//        System.out.println(highestAndLowest("1 2 3 4 5")); // повертає "5 1"
+//        System.out.println(highestAndLowest("1 9 4 -5"));  // повертає "9 -5"
+
         // -----------------------------
 
 
+    }
 
-        String str = "01203";
-
-        char[] charArray = str.toCharArray();
-
-        System.out.println(Arrays.toString(charArray));
-
+    public static String highestAndLowest(String numbers) {
+        StringBuilder qw = new StringBuilder();
+        String[] words = numbers.split(" ");
+        int highest = Integer.parseInt(words[0]);
+        int lowest = Integer.parseInt(words[0]);
+        for (int i = 0; i < words.length; i++) {
+            int b = Integer.parseInt(words[i]);
+            if (b > highest) {
+                highest = b;
+            }
+            if (b < lowest) {
+                lowest = b;
+            }
+        }
+        qw.append(highest).append(" ").append(lowest);
+        return String.valueOf(qw);
     }
 
     public static String removeDuplicates(String text) {
