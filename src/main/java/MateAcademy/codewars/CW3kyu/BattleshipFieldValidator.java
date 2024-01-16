@@ -50,7 +50,7 @@ public class BattleshipFieldValidator {
                     }
                 }
             }
-        System.out.println(destroyers);
+        //System.out.println(destroyers);
         if (submarines != 4) return false;
         if (destroyers != 3) return false;
         if (cruisers != 2) return false;
