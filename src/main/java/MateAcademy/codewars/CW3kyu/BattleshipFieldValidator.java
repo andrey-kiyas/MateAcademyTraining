@@ -1,8 +1,5 @@
 package MateAcademy.codewars.CW3kyu;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * https://www.codewars.com/kata/52bb6539a4cf1b12d90005b7/train/java
  */
@@ -24,54 +21,6 @@ public class BattleshipFieldValidator {
         };
         System.out.println(fieldValidator(validField0)); // Output: true
     }
-
-//    public static void main(String[] args) {
-//        int[][] validField0 = {
-//                {1, 0, 0, 0, 0, 1, 1, 0, 0, 0},
-//                {1, 0, 1, 0, 0, 0, 0, 0, 1, 0},
-//                {1, 0, 1, 0, 1, 1, 1, 0, 1, 0},
-//                {1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-//                {0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-//                {0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-//                {0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-//                {0, 0, 0, 1, 0, 0, 0, 0, 0, 0},
-//                {0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
-//                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-//        };
-//        System.out.println(fieldValidator(validField0)); // Output: true
-//        int[][] validField = {
-//                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-//                {1, 1, 1, 1, 0, 0, 0, 0, 0, 0},
-//                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-//                {0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-//                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-//                {1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-//                {1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-//                {1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-//                {1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-//                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-//        };
-//        System.out.println(fieldValidator(validField)); // Output: true
-//        int[][] invalidField = {
-//                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-//                {1, 1, 1, 1, 0, 0, 0, 0, 0, 0},
-//                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-//                {0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-//                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-//                {1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-//                {1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-//                {1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-//                {1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-//                {0, 0, 0, 0, 0, 0, 0, 0, 0, 1} // Invalid ship count
-//        };
-//        System.out.println(fieldValidator(invalidField)); // Output: false
-//    }
-
-
-
-
-
-
 
     public static boolean fieldValidator(int[][] field) {
         Integer submarines = 0;
@@ -123,44 +72,4 @@ public class BattleshipFieldValidator {
             if (field[x + 1][y] == 1) return 1 + checkvsl(x + 1, y, field);
         return 1;
     }
-
-
-
-
-
-//    public static boolean fieldValidator(int[][] field) {
-//        Set<String> visitedCells = new HashSet<>();
-//        for (int i = 0; i < 10; i++) {
-//            for (int j = 0; j < 10; j++) {
-//                if (field[i][j] == 1 && !visitedCells.contains(i + "," + j)) {
-//                    if (!isValidShip(field, visitedCells, i, j)) {
-//                        return false;
-//                    }
-//                }
-//            }
-//        }
-//        return true;
-//    }
-//
-//    private static boolean isValidShip(int[][] field, Set<String> visitedCells, int row, int col) {
-//        int shipSize = 0;
-//        while (row < 10 && field[row][col] == 1 && !visitedCells.contains(row + "," + col)) {
-//            visitedCells.add(row + "," + col);
-//            shipSize++;
-//            row++;
-//        }
-//        if (shipSize == 0 || shipSize > 4) {
-//            return false;  // Invalid ship size
-//        }
-//        int endRow = row - 1;
-//        int endCol = col;
-//        // Check for ship overlap
-//        for (int i = 0; i < shipSize; i++) {
-//            if (endRow + 1 < 10 && field[endRow + 1][endCol] == 1 && !visitedCells.contains((endRow + 1) + "," + endCol)) {
-//                return false;
-//            }
-//            endRow--;
-//        }
-//        return true;
-//    }
 }
