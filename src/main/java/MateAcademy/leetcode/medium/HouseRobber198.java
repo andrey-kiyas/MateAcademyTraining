@@ -7,8 +7,8 @@ package MateAcademy.leetcode.medium;
 public class HouseRobber198 {
 
     public static void main(String[] args) {
-//        System.out.println(rob(new int[]{1, 2, 3, 1}));    // 1 + 3 = 4
-//        System.out.println(rob(new int[]{2, 7, 9, 3, 1})); // 2 + 9 + 1 = 12
+        System.out.println(rob(new int[]{1, 2, 3, 1}));    // 1 + 3 = 4
+        System.out.println(rob(new int[]{2, 7, 9, 3, 1})); // 2 + 9 + 1 = 12
         System.out.println(rob(new int[]{1, 9, 2, 8, 3, 7, 4})); // 9 + 8 + 7 = 24
     }
 
@@ -26,15 +26,5 @@ public class HouseRobber198 {
             dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i]);
         }
         return dp[n - 1];
-    }
-
-    public static int rob2(int[] nums) {
-        int result = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (i % 2 == 0) {
-                result += nums[i];
-            }
-        }
-        return result;
     }
 }
