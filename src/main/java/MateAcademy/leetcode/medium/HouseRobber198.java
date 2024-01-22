@@ -7,9 +7,23 @@ package MateAcademy.leetcode.medium;
 public class HouseRobber198 {
 
     public static void main(String[] args) {
-        System.out.println(rob(new int[]{1, 2, 3, 1}));    // 1 + 3 = 4
-        System.out.println(rob(new int[]{2, 7, 9, 3, 1})); // 2 + 9 + 1 = 12
+        System.out.println(rob(new int[]{1, 2, 3, 1}));          // 1 + 3 = 4
+        System.out.println(rob(new int[]{2, 7, 9, 3, 1}));       // 2 + 9 + 1 = 12
         System.out.println(rob(new int[]{1, 9, 2, 8, 3, 7, 4})); // 9 + 8 + 7 = 24
+        System.out.println(rob(new int[]{2, 1, 1, 2}));          // 2 + 2 = 4
+    }
+
+    public static int rob2(int[] nums) {
+        int even = 0;
+        int odd = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (i % 2 == 0) {
+                even += nums[i];
+            } else {
+                odd += nums[i];
+            }
+        }
+        return Math.max(even, odd);
     }
 
     public static int rob(int[] nums) {
