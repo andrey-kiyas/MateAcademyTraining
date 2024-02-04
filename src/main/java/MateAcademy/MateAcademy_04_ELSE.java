@@ -72,9 +72,23 @@ public class MateAcademy_04_ELSE {
 //        System.out.println(highestAndLowest("1 2 3 4 5")); // повертає "5 1"
 //        System.out.println(highestAndLowest("1 9 4 -5"));  // повертає "9 -5"
 
+//        System.out.println(getOccurrenceCount(new String[]{"red", "red", "red", "red", "red"}, "red"));
+//        System.out.println(getOccurrenceCount(new String[]{"red", "red", null, "red", "red"}, "red"));
         // -----------------------------
 
 
+
+    }
+
+    public static int getOccurrenceCount(String[] colors, String targetColor) {
+        int count = 0;
+        for (String color : colors) {
+//            if (color.equals(targetColor)){
+            if (targetColor.equals(color)){
+                count++;
+            }
+        }
+        return count;
     }
 
     public static String highestAndLowest(String numbers) {
