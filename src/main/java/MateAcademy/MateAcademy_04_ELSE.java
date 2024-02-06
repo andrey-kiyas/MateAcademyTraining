@@ -74,17 +74,44 @@ public class MateAcademy_04_ELSE {
 
 //        System.out.println(getOccurrenceCount(new String[]{"red", "red", "red", "red", "red"}, "red"));
 //        System.out.println(getOccurrenceCount(new String[]{"red", "red", null, "red", "red"}, "red"));
+
+//        System.out.println(isArrayPretty(new int[]{0, 2, 3, 7, 8, 9, 11, 12, 21, 22}));
+//        System.out.println(isArrayPretty(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8}));
+
         // -----------------------------
 
 
 
+
+
+
+    }
+
+    public static boolean isArrayPretty(int[] array) {
+        // write code here
+        if (array.length == 0) {
+            return false;
+        }
+        for (int i : array) {
+            boolean foundAdjacent = false;
+            for (int j : array) {
+                if (j == i - 1 || j == i + 1) {
+                    foundAdjacent = true;
+                    break;
+                }
+            }
+            if (!foundAdjacent) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static int getOccurrenceCount(String[] colors, String targetColor) {
         int count = 0;
         for (String color : colors) {
 //            if (color.equals(targetColor)){
-            if (targetColor.equals(color)){
+            if (targetColor.equals(color)) {
                 count++;
             }
         }
