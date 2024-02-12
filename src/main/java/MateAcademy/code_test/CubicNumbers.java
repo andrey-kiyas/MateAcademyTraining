@@ -8,10 +8,7 @@ public class CubicNumbers {
         System.out.println(findCubicNumbers("%%%5992&&&")); // ==> "Unlucky"
         System.out.println(findCubicNumbers("    "));
         System.out.println(findCubicNumbers("9324 0 -3923"));
-
 //        System.out.println(findCubicNumbers("9324 0 -3923", "0 0 Lucky"));
-
-
     }
 
     public static String findCubicNumbers(String string) {
