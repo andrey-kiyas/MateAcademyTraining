@@ -35,7 +35,7 @@ public class CubicNumbers {
             }
             int parseInt = Integer.parseInt(str);
             if (isCubic(parseInt)) {
-                builder.append(parseInt + " ");
+                builder.append(parseInt).append(" ");
                 sumCubic += parseInt;
                 isCubic = true;
             }
