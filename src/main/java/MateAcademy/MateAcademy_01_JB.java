@@ -160,6 +160,8 @@ public class MateAcademy_01_JB {
 //        System.out.println(getNeighboursCells2(array, rowIndex, columnIndex));
 
 
+
+
     }
 
     // вариант ментора
