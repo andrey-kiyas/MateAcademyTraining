@@ -9,9 +9,9 @@ import java.util.stream.Collectors;
 
 public class Practice {
     public static void main(String[] args) {
-        System.out.println(numbOfOccur(new int[]{1, 1, 2, 2, 3}));
+//        System.out.println(numbOfOccur(new int[]{1, 1, 2, 2, 3}));
 
-//        System.out.println(firstA(new String[]{"Abf", "Cbd", "Aaa", "Baa", "Nbgf", "Aaa", "Lllk", "Kjhy", "Adsf"}));
+        System.out.println(firstA(new String[]{"Abf", "Cbd", "Aaa", "Baa", "Nbgf", "Aaa", "Lllk", "Kjhy", "Adsf"}));
     }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
