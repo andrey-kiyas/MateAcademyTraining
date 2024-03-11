@@ -87,7 +87,6 @@ public class MateAcademy_04_ELSE {
     }
 
     public static boolean isArrayPretty(int[] array) {
-        // write code here
         if (array.length == 0) {
             return false;
         }
