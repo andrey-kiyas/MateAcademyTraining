@@ -79,12 +79,6 @@ public class MateAcademy_04_ELSE {
 //        System.out.println(isArrayPretty(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8}));
 
 
-        long myLong = 1300000L;
-        float myFloat = myLong;
-
-        System.out.println(myFloat + " - " + myLong);
-
-
         // -----------------------------
 
 
