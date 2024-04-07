@@ -78,13 +78,14 @@ public class MateAcademy_04_ELSE {
 //        System.out.println(isArrayPretty(new int[]{0, 2, 3, 7, 8, 9, 11, 12, 21, 22}));
 //        System.out.println(isArrayPretty(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8}));
 
-
+//        System.out.println(removeVowel("aeiouAEIOU1"));
         // -----------------------------
 
 
+    }
 
-
-
+    public static String removeVowel(String string) {
+        return string.replaceAll("[aeiouAEIOU]", "");
     }
 
     public static boolean isArrayPretty(int[] array) {
