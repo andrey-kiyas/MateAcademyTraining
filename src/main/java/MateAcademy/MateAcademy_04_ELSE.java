@@ -83,6 +83,32 @@ public class MateAcademy_04_ELSE {
 
 
 
+
+
+
+
+    }
+
+
+
+
+
+    public static String highestAndLowest(String numbers) {
+        StringBuilder qw = new StringBuilder();
+        String[] words = numbers.split(" ");
+        int highest = Integer.parseInt(words[0]);
+        int lowest = Integer.parseInt(words[0]);
+        for (int i = 0; i < words.length; i++) {
+            int b = Integer.parseInt(words[i]);
+            if (b > highest) {
+                highest = b;
+            }
+            if (b < lowest) {
+                lowest = b;
+            }
+        }
+        qw.append(highest).append(" ").append(lowest);
+        return String.valueOf(qw);
     }
 
     public static String removeVowel(String string) {
@@ -117,24 +143,6 @@ public class MateAcademy_04_ELSE {
             }
         }
         return count;
-    }
-
-    public static String highestAndLowest(String numbers) {
-        StringBuilder qw = new StringBuilder();
-        String[] words = numbers.split(" ");
-        int highest = Integer.parseInt(words[0]);
-        int lowest = Integer.parseInt(words[0]);
-        for (int i = 0; i < words.length; i++) {
-            int b = Integer.parseInt(words[i]);
-            if (b > highest) {
-                highest = b;
-            }
-            if (b < lowest) {
-                lowest = b;
-            }
-        }
-        qw.append(highest).append(" ").append(lowest);
-        return String.valueOf(qw);
     }
 
     public static String removeDuplicates(String text) {
