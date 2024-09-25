@@ -86,9 +86,10 @@ public class SudokuSolver {
                             board[row][column] = numberToTry;
                             if (solveBoard(board)) {
                                 return true;
+                            } else {
+                                board[row][column] = 0;
                             }
                         }
-                        board[row][column] = 0;
                     }
                     return false;
                 }
