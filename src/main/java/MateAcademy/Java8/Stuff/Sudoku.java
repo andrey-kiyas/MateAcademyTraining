@@ -1,7 +1,7 @@
 package MateAcademy.Java8.Stuff;
 
 public class Sudoku {
-    private int[][] grid;
+    private final int[][] grid;
 
     public Sudoku(int[][] initialGrid) {
         this.grid = initialGrid;
@@ -81,6 +81,17 @@ public class Sudoku {
 //                {0, 4, 0, 0, 0, 6, 0, 0, 8},
 //                {9, 1, 6, 8, 0, 4, 7, 5, 3},
 //                {2, 0, 8, 0, 0, 0, 6, 1, 0}
+//        };
+//        int[][] initialGrid = {
+//                {7, 0, 0, 0, 0, 0, 9, 0, 0},
+//                {4, 3, 0, 0, 0, 6, 0, 0, 1},
+//                {0, 0, 6, 0, 0, 0, 0, 7, 0},
+//                {0, 0, 0, 9, 0, 0, 0, 0, 8},
+//                {0, 9, 5, 6, 8, 0, 0, 0, 0},
+//                {0, 0, 0, 0, 5, 0, 0, 0, 7},
+//                {0, 0, 0, 0, 0, 0, 0, 0, 4},
+//                {0, 1, 2, 0, 0, 0, 6, 8, 0},
+//                {0, 0, 4, 5, 3, 8, 0, 0, 0}
 //        };
         int[][] initialGrid = {
                 {7, 0, 2, 0, 5, 0, 6, 0, 0},
