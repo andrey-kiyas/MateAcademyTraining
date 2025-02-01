@@ -4,7 +4,7 @@ package MateAcademy.leetcode.easy;
  * https://leetcode.com/problems/majority-element
  */
 
-public class MajorityElement169 {
+public class LC0169MajorityElement {
 
     public static void main(String[] args) {
         System.out.println(majorityElement(new int[]{3, 2, 3})); // Output: 3

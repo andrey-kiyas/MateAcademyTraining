@@ -7,7 +7,7 @@ import java.util.Map;
  * https://leetcode.com/problems/most-frequent-even-element
  */
 
-public class MostFrequentEvenElement2404 {
+public class LC2404MostFrequentEvenElement {
 
     public static void main(String[] args) {
         System.out.println(mostFrequentEven(new int[]{0, 1, 2, 2, 4, 4, 1}));           // Output: 2

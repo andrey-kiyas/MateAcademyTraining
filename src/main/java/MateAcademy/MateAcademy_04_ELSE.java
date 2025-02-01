@@ -83,7 +83,15 @@ public class MateAcademy_04_ELSE {
 
 
 
+        double num = -14.3286;
 
+//        String formatted = String.format("%.2f", num);=впр(
+//        // Убираем точку и преобразуем в long
+//        long result = Long.parseLong(formatted.replace(".", ""));
+
+        String formatted = String.format("%.2f", num);
+        // Убираем точку и преобразуем в long
+        long result = Long.valueOf(formatted.replace(".", ""));
 
 
 
