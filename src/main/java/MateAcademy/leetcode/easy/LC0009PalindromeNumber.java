@@ -2,6 +2,10 @@ package MateAcademy.leetcode.easy;
 
 import java.util.Scanner;
 
+/**
+ * https://leetcode.com/problems/palindrome-number/
+ */
+
 public class LC0009PalindromeNumber {
 
     public static void main(String[] args) {

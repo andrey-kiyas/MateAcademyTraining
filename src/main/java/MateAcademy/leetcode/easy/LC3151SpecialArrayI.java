@@ -1,5 +1,9 @@
 package MateAcademy.leetcode.easy;
 
+/**
+ * https://leetcode.com/problems/special-array-i/
+ */
+
 public class LC3151SpecialArrayI {
 
     public static void main(String[] args) {

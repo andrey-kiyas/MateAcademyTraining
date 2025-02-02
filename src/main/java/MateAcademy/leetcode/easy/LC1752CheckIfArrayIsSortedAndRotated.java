@@ -1,5 +1,9 @@
 package MateAcademy.leetcode.easy;
 
+/**
+ * https://leetcode.com/problems/check-if-array-is-sorted-and-rotated
+ */
+
 public class LC1752CheckIfArrayIsSortedAndRotated {
 
     public static void main(String[] args) {
