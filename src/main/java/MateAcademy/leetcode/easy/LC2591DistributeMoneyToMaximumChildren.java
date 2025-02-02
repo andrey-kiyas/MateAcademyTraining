@@ -4,7 +4,7 @@ package MateAcademy.leetcode.easy;
  * https://leetcode.com/problems/distribute-money-to-maximum-children
  */
 
-public class DistributeMoneyToMaximumChildren2591 {
+public class LC2591DistributeMoneyToMaximumChildren {
 
     public static void main(String[] args) {
         System.out.println("Expected 1 - " + distMoney(20, 3) + " Output"); // Output: 1
