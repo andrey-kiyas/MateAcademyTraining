@@ -1,5 +1,9 @@
 package MateAcademy.leetcode.medium;
 
+/**
+ * https://leetcode.com/problems/valid-sudoku
+ */
+
 public class LC0036ValidSudoku {
 
     public static void main(String[] args) {

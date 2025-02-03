@@ -4,7 +4,7 @@ package MateAcademy.leetcode.medium;
  * https://leetcode.com/problems/integer-to-roman
  */
 
-public class IntegerToRoman12 {
+public class LC0012IntegerToRoman {
 
     public static void main(String[] args) {
         System.out.println(intToRoman(3));      // Output: "III"
