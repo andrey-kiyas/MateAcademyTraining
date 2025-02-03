@@ -4,7 +4,7 @@ package MateAcademy.leetcode.medium;
  * https://leetcode.com/problems/house-robber
  */
 
-public class HouseRobber198 {
+public class LC0198HouseRobber {
 
     public static void main(String[] args) {
         System.out.println(rob(new int[]{1, 2, 3, 1}));          // 1 + 3 = 4
