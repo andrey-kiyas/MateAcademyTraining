@@ -4,7 +4,7 @@ package MateAcademy.leetcode.medium;
  * https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree
  */
 
-public class PseudoPalindromicPathsInABinaryTree1457 {
+public class LC1457PseudoPalindromicPathsInABinaryTree {
 
     public static void main(String[] args) {
         // Примеры
