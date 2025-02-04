@@ -6,7 +6,7 @@ import java.util.Stack;
  * https://leetcode.com/problems/sum-of-subarray-minimums
  */
 
-public class SumOfSubarrayMinimums907 {
+public class LC0907SumOfSubarrayMinimums {
 
     public static void main(String[] args) {
         System.out.println(sumSubarrayMins(new int[]{3, 1, 2, 4}));        // Вывод: 17
