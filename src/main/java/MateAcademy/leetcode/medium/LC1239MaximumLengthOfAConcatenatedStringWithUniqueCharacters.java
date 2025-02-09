@@ -6,7 +6,7 @@ import java.util.List;
  * https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters
  */
 
-public class MaximumLengthOfAConcatenatedStringWithUniqueCharacters1239 {
+public class LC1239MaximumLengthOfAConcatenatedStringWithUniqueCharacters {
 
     public static void main(String[] args) {
         List<String> arr1 = List.of("un", "iq", "ue");
