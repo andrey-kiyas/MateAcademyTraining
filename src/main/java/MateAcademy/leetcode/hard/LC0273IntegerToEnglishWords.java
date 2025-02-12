@@ -4,7 +4,7 @@ package MateAcademy.leetcode.hard;
  * https://leetcode.com/problems/integer-to-english-words
  */
 
-public class IntegerToEnglishWords273 {
+public class LC0273IntegerToEnglishWords {
     private static final String[] BELOW_20 = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
             "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
     private static final String[] TENS = {"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
