@@ -4,7 +4,7 @@ package MateAcademy.leetcode.easy;
  * https://leetcode.com/problems/search-insert-position
  */
 
-public class SearchInsertPosition35 {
+public class LC0035SearchInsertPosition {
 
     public static void main(String[] args) {
         System.out.println(searchInsert(new int[]{1, 3, 5, 6}, 5));
