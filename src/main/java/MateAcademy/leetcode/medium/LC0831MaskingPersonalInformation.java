@@ -46,5 +46,4 @@ public class LC0831MaskingPersonalInformation {
 
         return countryPrefix + maskedLocal;
     }
-
 }
