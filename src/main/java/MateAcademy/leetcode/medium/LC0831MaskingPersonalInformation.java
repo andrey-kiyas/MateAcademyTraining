@@ -47,32 +47,4 @@ public class LC0831MaskingPersonalInformation {
         return countryPrefix + maskedLocal;
     }
 
-//    public static String maskPII(String s) {
-//        if (s.contains("@")) {
-//            return maskEmail(s);
-//        } else {
-//            return maskPhone(s);
-//        }
-//    }
-//
-//    private static String maskEmail(String email) {
-//        email = email.toLowerCase();
-//        String[] parts = email.split("@");
-//        String name = parts[0];
-//        String domain = parts[1];
-//        return name.charAt(0) + "*****" + name.charAt(name.length() - 1) + "@" + domain;
-//    }
-//
-//    private static String maskPhone(String phone) {
-//        String digits = phone.replaceAll("[^0-9]", "");
-//        String lastFour = digits.substring(digits.length() - 4);
-//        String maskedLocal = "***-***-" + lastFour;
-//
-//        int countryCodeLength = digits.length() - 10;
-//        if (countryCodeLength == 0) {
-//            return maskedLocal;
-//        }
-//        String countryPrefix = "+".repeat(countryCodeLength) + "-";
-//        return countryPrefix + maskedLocal;
-//    }
 }
