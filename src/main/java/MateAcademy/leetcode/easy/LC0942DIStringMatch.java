@@ -26,6 +26,7 @@ public class LC0942DIStringMatch {
             }
         }
         result[n] = low;
+
         return result;
     }
 }
