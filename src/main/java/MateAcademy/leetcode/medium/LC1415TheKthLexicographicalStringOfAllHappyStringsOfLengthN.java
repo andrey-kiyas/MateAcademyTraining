@@ -26,6 +26,7 @@ public class LC1415TheKthLexicographicalStringOfAllHappyStringsOfLengthN {
             happyStrings.add(current);
             return;
         }
+
         for (char c : new char[]{'a', 'b', 'c'}) {
             if (current.isEmpty() || current.charAt(current.length() - 1) != c) {
                 generateHappyStrings(n, current + c, happyStrings);
