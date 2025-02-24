@@ -18,7 +18,6 @@ public class LC2467MostProfitablePathInATree {
                 new int[][]{{0, 1}},
                 1,
                 new int[]{-7280, 2350}));       // -7280
-
     }
 
     public static int mostProfitablePath(int[][] edges, int bob, int[] amount) {
