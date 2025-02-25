@@ -26,6 +26,7 @@ public class LC1524NumberOfSubArraysWithOddSum {
                 odd_prefix++;
             }
         }
+
         return count;
     }
 }
