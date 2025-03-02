@@ -10,7 +10,6 @@ import java.util.TreeMap;
 
 public class LC2570MergeTwo2DArraysBySummingValues {
     public static void main(String[] args) {
-
         System.out.println(Arrays.deepToString(mergeArrays(
                 new int[][]{{1, 2}, {2, 3}, {4, 5}},
                 new int[][]{{1, 4}, {3, 2}, {4, 1}})));     // [[1, 4], [2, 6], [4, 10]]
