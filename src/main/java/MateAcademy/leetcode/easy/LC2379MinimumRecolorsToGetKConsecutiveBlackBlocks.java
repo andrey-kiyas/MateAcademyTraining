@@ -12,6 +12,7 @@ public class LC2379MinimumRecolorsToGetKConsecutiveBlackBlocks {
 
     public static int minimumRecolors(String blocks, int k) {
         int minOperations = Integer.MAX_VALUE;
+
         for (int i = 0; i <= blocks.length() - k; i++) {
             int whiteCount = 0;
             for (int j = i; j < i + k; j++) {
@@ -21,6 +22,7 @@ public class LC2379MinimumRecolorsToGetKConsecutiveBlackBlocks {
             }
             minOperations = Math.min(minOperations, whiteCount);
         }
+
         return minOperations;
     }
 }
