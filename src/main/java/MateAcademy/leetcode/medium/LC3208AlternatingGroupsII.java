@@ -10,9 +10,6 @@ public class LC3208AlternatingGroupsII {
         System.out.println(numberOfAlternatingGroups(new int[]{0, 1, 0, 0, 1, 0, 1}, 6)); // 2
         System.out.println(numberOfAlternatingGroups(new int[]{1, 1, 0, 1}, 4));          // 0
         System.out.println(numberOfAlternatingGroups(new int[]{0, 1, 1}, 3));             // 1
-
-
-
     }
 
     public static int numberOfAlternatingGroups(int[] colors, int k) {
