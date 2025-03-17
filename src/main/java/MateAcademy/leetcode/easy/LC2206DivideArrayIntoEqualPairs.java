@@ -22,6 +22,7 @@ public class LC2206DivideArrayIntoEqualPairs {
                 return false;
             }
         }
+
         return true;
     }
 }
