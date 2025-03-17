@@ -7,7 +7,7 @@ package MateAcademy.leetcode.easy;
 public class LC2206DivideArrayIntoEqualPairs {
     public static void main(String[] args) {
         System.out.println(divideArray(new int[]{3, 2, 3, 2, 2, 2})); // true
-        System.out.println(divideArray(new int[]{1, 2, 3, 4})); // false
+        System.out.println(divideArray(new int[]{1, 2, 3, 4}));       // false
     }
 
     public static boolean divideArray(int[] nums) {
