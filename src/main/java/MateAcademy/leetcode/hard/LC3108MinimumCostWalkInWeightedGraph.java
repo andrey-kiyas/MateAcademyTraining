@@ -36,7 +36,7 @@ public class LC3108MinimumCostWalkInWeightedGraph {
             if (parent1 == parent2) {
                 bitwise[parent1] &= weight;
             } else {
-                int bitwiseVal = 0;
+                int bitwiseVal;
                 boolean check1 = bitwise[parent1] == -1;
                 boolean check2 = bitwise[parent2] == -1;
                 if (check1 && check2) {
