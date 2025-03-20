@@ -8,7 +8,6 @@ import java.util.Arrays;
 
 public class LC3108MinimumCostWalkInWeightedGraph {
     public static void main(String[] args) {
-
         System.out.println(Arrays.toString(minimumCost(5,
                 new int[][]{{0, 1, 7}, {1, 3, 7}, {1, 2, 1}},
                 new int[][]{{0, 3}, {3, 4}})));                           // [1,-1]
