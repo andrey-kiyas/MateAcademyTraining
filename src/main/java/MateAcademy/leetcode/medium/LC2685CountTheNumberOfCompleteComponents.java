@@ -9,8 +9,10 @@ import java.util.List;
 
 public class LC2685CountTheNumberOfCompleteComponents {
     public static void main(String[] args) {
-        System.out.println(countCompleteComponents(6, new int[][]{{0, 1}, {0, 2}, {1, 2}, {3, 4}}));         // 3
-        System.out.println(countCompleteComponents(6, new int[][]{{0, 1}, {0, 2}, {1, 2}, {3, 4}, {3, 5}})); // 1
+        System.out.println(countCompleteComponents(6,
+                new int[][]{{0, 1}, {0, 2}, {1, 2}, {3, 4}}));         // 3
+        System.out.println(countCompleteComponents(6,
+                new int[][]{{0, 1}, {0, 2}, {1, 2}, {3, 4}, {3, 5}})); // 1
     }
 
     public static int countCompleteComponents(int n, int[][] edges) {
