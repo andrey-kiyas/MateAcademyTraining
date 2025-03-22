@@ -4,7 +4,7 @@ package MateAcademy.leetcode.medium;
  * https://leetcode.com/problems/container-with-most-water
  */
 
-public class ContainerWithMostWater11 {
+public class LC0011ContainerWithMostWater {
 
     public static void main(String[] args) {
         System.out.println(maxArea(new int[]{1,2,4,3}));                   // 4
