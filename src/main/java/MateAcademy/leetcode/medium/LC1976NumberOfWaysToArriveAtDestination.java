@@ -1,12 +1,6 @@
 package MateAcademy.leetcode.medium;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import org.apache.commons.lang3.tuple.Pair;
 
 /**
  * https://leetcode.com/problems/number-of-ways-to-arrive-at-destination
@@ -14,8 +8,9 @@ import org.apache.commons.lang3.tuple.Pair;
 
 public class LC1976NumberOfWaysToArriveAtDestination {
     public static void main(String[] args) {
-        int[][] roads1 = {{0,6,7},{0,1,2},{1,2,3},{1,3,3},{6,3,3},{3,5,1},{6,5,1},{2,5,1},{0,4,5},{4,6,2}};
-        int[][] roads2 = {{1,0,10}};
+        int[][] roads1 = {{0, 6, 7}, {0, 1, 2}, {1, 2, 3}, {1, 3, 3}, {6, 3, 3},
+                {3, 5, 1}, {6, 5, 1}, {2, 5, 1}, {0, 4, 5}, {4, 6, 2}};
+        int[][] roads2 = {{1, 0, 10}};
 
         System.out.println(countPaths(7, roads1)); // Output: 4
         System.out.println(countPaths(2, roads2)); // Output: 1
