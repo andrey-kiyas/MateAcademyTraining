@@ -1,10 +1,7 @@
 package MateAcademy.leetcode.medium;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
-import org.apache.commons.lang3.tuple.Pair;
 
 /**
  * https://leetcode.com/problems/check-if-grid-can-be-cut-into-sections
