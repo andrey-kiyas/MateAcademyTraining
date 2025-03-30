@@ -9,7 +9,6 @@ public class LC0763PartitionLabels {
         System.out.println(partitionLabels("eccbbbbdec"));               // [10]
     }
 
-
     public static List<Integer> partitionLabels(String s) {
         List<Integer> result = new ArrayList<>();
         int[] lastIndex = new int[26];
