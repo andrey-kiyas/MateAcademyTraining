@@ -9,7 +9,6 @@ public class LC2874MaximumValueOfAnOrderedTripletII {
         System.out.println(maximumTripletValue(new int[]{12, 6, 1, 2, 7}));  // 77
         System.out.println(maximumTripletValue(new int[]{1, 10, 3, 4, 19})); // 133
         System.out.println(maximumTripletValue(new int[]{1, 2, 3}));         // 0
-
     }
 
     public static long maximumTripletValue(int[] nums) {
