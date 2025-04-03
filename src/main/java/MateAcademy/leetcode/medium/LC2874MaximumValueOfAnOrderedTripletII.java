@@ -31,6 +31,6 @@ public class LC2874MaximumValueOfAnOrderedTripletII {
             maxValue = Math.max(maxValue, value);
         }
 
-        return Math.max(maxValue, 0);
+        return maxValue;
     }
 }
