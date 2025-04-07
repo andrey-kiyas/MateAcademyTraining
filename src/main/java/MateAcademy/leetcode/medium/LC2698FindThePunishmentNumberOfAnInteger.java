@@ -28,9 +28,9 @@ public class LC2698FindThePunishmentNumberOfAnInteger {
 
         int num = 0;
         for (int i = index; i < s.length(); i++) {
-            num = num * 10 + (s.charAt(i) - '0'); // Формуємо число з підстроки
+            num = num * 10 + (s.charAt(i) - '0');
             if (num > target) {
-                break; // Оптимізація: якщо перевищили ціль, зупиняємось
+                break;
             }
             if (isValidPartition(s, i + 1, target - num)) {
                 return true;
