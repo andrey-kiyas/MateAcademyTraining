@@ -1,5 +1,9 @@
 package MateAcademy.leetcode.easy;
 
+/**
+ * https://leetcode.com/problems/count-symmetric-integers
+ */
+
 public class LC2843CountSymmetricIntegers {
     public static void main(String[] args) {
         System.out.println(countSymmetricIntegers(1, 100));      // Output: 9
