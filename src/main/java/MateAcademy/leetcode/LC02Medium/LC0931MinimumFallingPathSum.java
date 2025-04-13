@@ -1,10 +1,10 @@
-package MateAcademy.leetcode.medium;
+package MateAcademy.leetcode.LC02Medium;
 
 /**
  * https://leetcode.com/problems/minimum-falling-path-sum
  */
 
-public class MinimumFallingPathSum931 {
+public class LC0931MinimumFallingPathSum {
 
     public static void main(String[] args) {
         System.out.println(minFallingPathSum(new int[][]{{2, 1, 3}, {6, 5, 4}, {7, 8, 9}})); // Output: 13
