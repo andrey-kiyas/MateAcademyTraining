@@ -9,7 +9,6 @@ import java.util.Map;
  */
 
 public class LC1399CountLargestGroup {
-
     public static void main(String[] args) {
         System.out.println(countLargestGroup(13)); // Output: 4
         System.out.println(countLargestGroup(2));  // Output: 2
