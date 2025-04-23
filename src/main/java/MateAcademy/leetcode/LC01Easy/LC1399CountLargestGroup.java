@@ -32,7 +32,6 @@ public class LC1399CountLargestGroup {
         }
 
         return result;
-
     }
 
     private static int digitSum(int num) {
