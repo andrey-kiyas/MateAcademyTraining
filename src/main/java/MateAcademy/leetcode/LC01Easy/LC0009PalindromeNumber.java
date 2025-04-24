@@ -1,4 +1,4 @@
-package MateAcademy.leetcode.easy;
+package MateAcademy.leetcode.LC01Easy;
 
 import java.util.Scanner;
 
@@ -29,7 +29,6 @@ public class LC0009PalindromeNumber {
         return original == reversed;
     }
 
-    // Solution with converting to string
     public static boolean isPalindrome2(int x) {
         if (x < 0 || (x % 10 == 0 && x != 0)) {
             return false;
