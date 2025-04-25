@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class LC2845CountOfInterestingSubarrays {
     public static void main(String[] args) {
-        System.out.println(countInterestingSubarrays(List.of(3, 2, 4), 2, 1)); // 3
+        System.out.println(countInterestingSubarrays(List.of(3, 2, 4), 2, 1));    // 3
         System.out.println(countInterestingSubarrays(List.of(3, 1, 9, 6), 3, 0)); // 2
     }
 
