@@ -21,7 +21,6 @@ public class LC0790DominoAndTrominoTiling {
         dp[1] = 1;
         dp[2] = 2;
 
-        long sum = dp[0];
         for (int i = 3; i <= n; i++) {
             dp[i] = (2 * dp[i - 1] % MOD + dp[i - 3]) % MOD;
         }
