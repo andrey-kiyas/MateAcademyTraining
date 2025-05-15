@@ -8,6 +8,12 @@ import java.util.List;
  */
 
 public class LC2900LongestUnequalAdjacentGroupsSubsequenceI {
+
+
+
+
+
+
     public static void main(String[] args) {
         System.out.println(getLongestSubsequence(
                 new String[]{"e", "a", "b"},
