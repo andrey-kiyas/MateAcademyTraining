@@ -11,7 +11,6 @@ public class LC2131LongestPalindromeByConcatenatingTwoLetterWords {
     public static void main(String[] args) {
         System.out.println(longestPalindrome(new String[]{"lc", "cl", "gg"}));                   // 6
         System.out.println(longestPalindrome(new String[]{"ab", "ty", "yt", "lc", "cl", "ab"})); // 8
-
         System.out.println(longestPalindrome(new String[]{"cc", "ll", "xx"}));                   // 2
     }
 
