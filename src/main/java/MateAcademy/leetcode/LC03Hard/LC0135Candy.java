@@ -8,6 +8,12 @@ import java.util.Arrays;
 
 public class LC0135Candy {
     public static void main(String[] args) {
+
+
+
+
+
+
         System.out.println(candy(new int[]{1, 0, 2}));  // Output: 5
         System.out.println(candy(new int[]{1, 2, 2}));  // Output: 4
         System.out.println(candy2(new int[]{1, 0, 2})); // Output: 5
