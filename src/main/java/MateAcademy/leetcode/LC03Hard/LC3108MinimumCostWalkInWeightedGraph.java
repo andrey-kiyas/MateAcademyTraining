@@ -1,4 +1,4 @@
-package MateAcademy.leetcode.hard;
+package MateAcademy.leetcode.LC03Hard;
 
 import java.util.Arrays;
 
