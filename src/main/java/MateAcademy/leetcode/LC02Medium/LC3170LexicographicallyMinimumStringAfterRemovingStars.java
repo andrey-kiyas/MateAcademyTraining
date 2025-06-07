@@ -1,7 +1,6 @@
 package MateAcademy.leetcode.LC02Medium;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
