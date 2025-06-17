@@ -1,10 +1,7 @@
 package MateAcademy.leetcode.LC03Hard;
 
 public class LC3405CountTheNumberOfArraysWithKMatchingAdjacentElements {
-    static final int MOD = 1_000_000_007;
-    static final int MAX = 100_005;
-    static long[] fact = new long[MAX];
-    static long[] invFact = new long[MAX];
+    private static final int MOD = 1_000_000_007;
 
     public static void main(String[] args) {
         System.out.println(countGoodArrays(3, 2, 1)); // 4
@@ -13,37 +10,36 @@ public class LC3405CountTheNumberOfArraysWithKMatchingAdjacentElements {
     }
 
     public static int countGoodArrays(int n, int m, int k) {
-        precomputeFactorials();
-        long res = m;
-        res = res * comb(n - 1, k) % MOD;
-        res = res * modPow(m - 1, n - 1 - k) % MOD;
-        return (int) res;
+        final long[][] factAndInvFact = getFactAndInvFact(n);
+        final long[] fact = factAndInvFact[0];
+        final long[] invFact = factAndInvFact[1];
+        return (int) (m * modPow(m - 1, n - k - 1) % MOD * nCk(n - 1, k, fact, invFact) % MOD);
     }
 
-    private static long modPow(long base, long exp) {
-        long result = 1;
-        base %= MOD;
-        while (exp > 0) {
-            if ((exp & 1) != 0) result = result * base % MOD;
-            base = base * base % MOD;
-            exp >>= 1;
-        }
-        return result;
-    }
-
-    private static void precomputeFactorials() {
+    private static long[][] getFactAndInvFact(int n) {
+        long[] fact = new long[n + 1];
+        long[] invFact = new long[n + 1];
+        long[] inv = new long[n + 1];
         fact[0] = invFact[0] = 1;
-        for (int i = 1; i < MAX; i++) {
+        inv[0] = inv[1] = 1;
+        for (int i = 1; i <= n; ++i) {
+            if (i >= 2)
+                inv[i] = MOD - MOD / i * inv[MOD % i] % MOD;
             fact[i] = fact[i - 1] * i % MOD;
+            invFact[i] = invFact[i - 1] * inv[i] % MOD;
         }
-        invFact[MAX - 1] = modPow(fact[MAX - 1], MOD - 2);
-        for (int i = MAX - 2; i > 0; i--) {
-            invFact[i] = invFact[i + 1] * (i + 1) % MOD;
-        }
+        return new long[][] {fact, invFact};
     }
 
-    private static long comb(int n, int k) {
-        if (k < 0 || k > n) return 0;
-        return fact[n] * invFact[k] % MOD * invFact[n - k] % MOD;
+    private static int nCk(int n, int k, long[] fact, long[] invFact) {
+        return (int) (fact[n] * invFact[k] % MOD * invFact[n - k] % MOD);
+    }
+
+    private static long modPow(long x, long n) {
+        if (n == 0)
+            return 1;
+        if (n % 2 == 1)
+            return x * modPow(x, n - 1) % MOD;
+        return modPow(x * x % MOD, n / 2);
     }
 }
