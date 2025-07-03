@@ -1,4 +1,4 @@
-package MateAcademy.leetcode.medium;
+package MateAcademy.leetcode.LC02Medium;
 
 /**
  * https://leetcode.com/problems/minimum-operations-to-make-binary-array-elements-equal-to-one-i
