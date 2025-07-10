@@ -6,9 +6,9 @@ package MateAcademy.leetcode.LC02Medium;
 
 public class LC3440RescheduleMeetingsForMaximumFreeTimeII {
     public static void main(String[] args) {
-        System.out.println(maxFreeTime(5, new int[]{1, 3}, new int[]{2, 5})); // 2
-        System.out.println(maxFreeTime(10, new int[]{0, 7, 9}, new int[]{1, 8, 10})); // 7
-        System.out.println(maxFreeTime(10, new int[]{0, 3, 7, 9}, new int[]{1, 4, 8, 10})); // 6
+        System.out.println(maxFreeTime(5, new int[]{1, 3}, new int[]{2, 5}));                   // 2
+        System.out.println(maxFreeTime(10, new int[]{0, 7, 9}, new int[]{1, 8, 10}));           // 7
+        System.out.println(maxFreeTime(10, new int[]{0, 3, 7, 9}, new int[]{1, 4, 8, 10}));     // 6
         System.out.println(maxFreeTime(5, new int[]{0, 1, 2, 3, 4}, new int[]{1, 2, 3, 4, 5})); // 0
     }
 
