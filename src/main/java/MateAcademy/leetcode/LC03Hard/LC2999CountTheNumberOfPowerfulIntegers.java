@@ -1,4 +1,4 @@
-package MateAcademy.leetcode.hard;
+package MateAcademy.leetcode.LC03Hard;
 
 /**
  * https://leetcode.com/problems/count-the-number-of-powerful-integers
