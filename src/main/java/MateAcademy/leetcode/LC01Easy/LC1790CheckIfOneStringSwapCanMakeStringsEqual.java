@@ -1,4 +1,4 @@
-package MateAcademy.leetcode.easy;
+package MateAcademy.leetcode.LC01Easy;
 
 /**
  * https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/description
