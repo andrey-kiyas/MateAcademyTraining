@@ -1,4 +1,4 @@
-package MateAcademy.leetcode.easy;
+package MateAcademy.leetcode.LC01Easy;
 
 import java.util.Arrays;
 
@@ -6,7 +6,7 @@ import java.util.Arrays;
  * https://leetcode.com/problems/set-mismatch
  */
 
-public class SetMismatch645 {
+public class LC0645SetMismatch {
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(findErrorNums(new int[]{1, 2, 2, 4}))); // [2, 3]
