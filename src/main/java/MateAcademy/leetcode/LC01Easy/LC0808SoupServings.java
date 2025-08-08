@@ -22,7 +22,6 @@ public class LC0808SoupServings {
     }
 
     public static double soupServings(int n) {
-
         if (n > 5000) {
             return 1.0;
         }
