@@ -1,10 +1,10 @@
-package MateAcademy.leetcode.easy;
+package MateAcademy.leetcode.LC01Easy;
 
 /**
  * https://leetcode.com/problems/first-bad-version
  */
 
-public class FirstBadVersion278 {
+public class LC0278FirstBadVersion {
 
     public static void main(String[] args) {
         System.out.println(firstBadVersion(5));
