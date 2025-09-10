@@ -23,23 +23,22 @@ public class LC1733MinimumNumberOfPeopleToTeach {
     }
 
     public static int minimumTeachings(int n, int[][] languages, int[][] friendships) {
-        int m = languages.length;
-        List<Set<Integer>> userLangs = new ArrayList<>();
+        List<Set<Integer>> userLang = new ArrayList<>();
         for (int[] langList : languages) {
             Set<Integer> set = new HashSet<>();
             for (int l : langList) set.add(l);
-            userLangs.add(set);
+            userLang.add(set);
         }
 
         Set<Integer> needTeach = new HashSet<>();
         for (int[] f : friendships) {
             int u = f[0] - 1, v = f[1] - 1;
-            Set<Integer> langsU = userLangs.get(u);
-            Set<Integer> langsV = userLangs.get(v);
+            Set<Integer> langU = userLang.get(u);
+            Set<Integer> langV = userLang.get(v);
 
             boolean canCommunicate = false;
-            for (int l : langsU) {
-                if (langsV.contains(l)) {
+            for (int l : langU) {
+                if (langV.contains(l)) {
                     canCommunicate = true;
                     break;
                 }
@@ -56,7 +55,7 @@ public class LC1733MinimumNumberOfPeopleToTeach {
         for (int lang = 1; lang <= n; lang++) {
             int count = 0;
             for (int user : needTeach) {
-                if (!userLangs.get(user).contains(lang)) {
+                if (!userLang.get(user).contains(lang)) {
                     count++;
                 }
             }
