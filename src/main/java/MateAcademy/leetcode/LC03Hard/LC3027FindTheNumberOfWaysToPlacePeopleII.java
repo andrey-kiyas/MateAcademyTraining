@@ -1,5 +1,8 @@
 package MateAcademy.leetcode.LC03Hard;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 /**
  * https://leetcode.com/problems/find-the-number-of-ways-to-place-people-ii
  */
@@ -12,9 +15,31 @@ public class LC3027FindTheNumberOfWaysToPlacePeopleII {
         System.out.println(numberOfPairs(points1)); // 0
         System.out.println(numberOfPairs(points2)); // 2
         System.out.println(numberOfPairs(points3)); // 2
+
+        System.out.println(numberOfPairs2(points1)); // 0
+        System.out.println(numberOfPairs2(points2)); // 2
+        System.out.println(numberOfPairs2(points3)); // 2
     }
 
     public static int numberOfPairs(int[][] points) {
+        int result = 0;
+
+        Arrays.sort(points, Comparator.comparingInt((int[] point) -> point[0])
+                .thenComparingInt((int[] point) -> - point[1]));
+
+        for (int i = 0; i < points.length; ++i) {
+            int maxY = Integer.MIN_VALUE;
+            for (int j = i + 1; j < points.length; ++j)
+                if (points[i][1] >= points[j][1] && points[j][1] > maxY) {
+                    ++result;
+                    maxY = points[j][1];
+                }
+        }
+
+        return result;
+    }
+
+    public static int numberOfPairs2(int[][] points) {
         int n = points.length;
         int count = 0;
 
