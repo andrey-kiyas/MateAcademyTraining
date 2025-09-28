@@ -1,4 +1,4 @@
-package MateAcademy.leetcode.easy;
+package MateAcademy.leetcode.LC01Easy;
 
 import java.util.Arrays;
 
@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class LC0976LargestPerimeterTriangle {
 
     public static void main(String[] args) {
-        System.out.println(largestPerimeter(new int[]{2, 1, 2}));    // 5
+        System.out.println(largestPerimeter(new int[]{2, 1, 2}));     // 5
         System.out.println(largestPerimeter(new int[]{1, 2, 1, 10})); // 0
     }
 
