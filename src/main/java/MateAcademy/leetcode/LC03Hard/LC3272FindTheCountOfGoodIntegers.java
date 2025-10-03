@@ -1,4 +1,4 @@
-package MateAcademy.leetcode.hard;
+package MateAcademy.leetcode.LC03Hard;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -24,7 +24,7 @@ public class LC3272FindTheCountOfGoodIntegers {
 
         long result = 0;
         Set<String> vis = new HashSet<>();
-        int base = (int) Math.pow(10, (n - 1) / 2);
+        int base = (int) Math.pow(10, (n - 1) >> 1);
 
         for (int i = base; i < base * 10; i++) {
             String s = String.valueOf(i);
