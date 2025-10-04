@@ -1,4 +1,4 @@
-package MateAcademy.leetcode.medium;
+package MateAcademy.leetcode.LC02Medium;
 
 /**
  * https://leetcode.com/problems/masking-personal-information
@@ -38,12 +38,8 @@ public class LC0831MaskingPersonalInformation {
             return maskedLocal;
         }
 
-        StringBuilder countryPrefix = new StringBuilder("+");
-        for (int i = 0; i < countryCodeLength; i++) {
-            countryPrefix.append("*");
-        }
-        countryPrefix.append("-");
-
+        String countryPrefix = "+" + "*".repeat(Math.max(0, countryCodeLength)) +
+                "-";
         return countryPrefix + maskedLocal;
     }
 }
