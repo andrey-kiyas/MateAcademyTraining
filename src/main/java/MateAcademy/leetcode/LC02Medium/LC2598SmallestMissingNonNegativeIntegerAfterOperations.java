@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
+ * https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations
  */
 
 public class LC2598SmallestMissingNonNegativeIntegerAfterOperations {
