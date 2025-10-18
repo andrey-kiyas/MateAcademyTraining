@@ -1,4 +1,4 @@
-package MateAcademy.leetcode.easy;
+package MateAcademy.leetcode.LC01Easy;
 
 import java.util.ArrayList;
 import java.util.HashSet;
