@@ -3,7 +3,7 @@ package MateAcademy.leetcode.LC02Medium;
 import java.util.Arrays;
 
 /**
- *
+ * https://leetcode.com/problems/maximum-number-of-distinct-elements-after-operations
  */
 
 public class LC3397MaximumNumberOfDistinctElementsAfterOperations {
