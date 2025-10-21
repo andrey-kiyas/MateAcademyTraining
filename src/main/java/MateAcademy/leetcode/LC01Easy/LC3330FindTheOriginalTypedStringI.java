@@ -6,9 +6,12 @@ package MateAcademy.leetcode.LC01Easy;
 
 public class LC3330FindTheOriginalTypedStringI {
     public static void main(String[] args) {
-        System.out.println(possibleStringCount("abbcccc")); // 5
-        System.out.println(possibleStringCount("abcd"));    // 1
-        System.out.println(possibleStringCount("aaaa"));    // 4
+        String hello = "HelloWorld!";
+        System.out.println(hello.substring(2, 7));
+
+//        System.out.println(possibleStringCount("abbcccc")); // 5
+//        System.out.println(possibleStringCount("abcd"));    // 1
+//        System.out.println(possibleStringCount("aaaa"));    // 4
     }
 
     public static int possibleStringCount(String word) {
