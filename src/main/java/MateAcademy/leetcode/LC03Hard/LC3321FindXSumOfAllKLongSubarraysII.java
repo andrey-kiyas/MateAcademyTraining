@@ -102,7 +102,7 @@ public class LC3321FindXSumOfAllKLongSubarraysII {
         while (!low.isEmpty() && !high.isEmpty() && CMP.compare(low.last(), high.first()) >= 0) {
 
             Integer p_low = low.pollLast();
-            if (p_low != null) { // Защита от NPE
+            if (p_low != null) {
                 high.add(p_low);
                 currentSum += (long) cnt.get(p_low) * p_low;
             }
