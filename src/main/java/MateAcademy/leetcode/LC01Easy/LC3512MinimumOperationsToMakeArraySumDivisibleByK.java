@@ -13,6 +13,7 @@ public class LC3512MinimumOperationsToMakeArraySumDivisibleByK {
 
     public static int minOperations(int[] nums, int k) {
         int sum = 0;
+
         for (int x : nums) sum += x;
 
         return sum % k;
