@@ -8,6 +8,7 @@ public class LC3578CountPartitionsWithMaxMinDifferenceAtMostK {
     static final int MOD = 1_000_000_007;
 
     public static void main(String[] args) {
+
         System.out.println(countPartitions(new int[]{9, 4, 1, 3, 7}, 4)); // 6
         System.out.println(countPartitions(new int[]{3, 3, 4}, 0));       // 2
     }
