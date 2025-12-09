@@ -14,7 +14,6 @@ public class LC3583CountSpecialTriplets {
     }
 
     public static int specialTriplets(int[] nums) {
-        int n = nums.length;
         int max = 100000;
 
         long[] left = new long[max * 2 + 1];
