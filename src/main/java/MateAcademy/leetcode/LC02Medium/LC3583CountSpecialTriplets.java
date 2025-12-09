@@ -26,8 +26,7 @@ public class LC3583CountSpecialTriplets {
 
         long ans = 0;
 
-        for (int j = 0; j < n; j++) {
-            int x = nums[j];
+        for (int x : nums) {
             right[x]--;
 
             int twice = x * 2;
