@@ -31,8 +31,6 @@ public class LC3433CountMentionsPerUser {
     public static int[] countMentions(int numberOfUsers, List<List<String>> events) {
 
 
-
-
         events.sort((a, b) -> {
             int timestampA = Integer.parseInt(a.get(1));
             int timestampB = Integer.parseInt(b.get(1));
