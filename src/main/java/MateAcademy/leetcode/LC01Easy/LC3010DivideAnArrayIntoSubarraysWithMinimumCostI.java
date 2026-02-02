@@ -8,8 +8,6 @@ public class LC3010DivideAnArrayIntoSubarraysWithMinimumCostI {
     public static void main(String[] args) {
         System.out.println(minimumCost(new int[]{1, 2, 3, 12}));
         System.out.println(minimumCost(new int[]{5, 4, 3}));
-
-        // Example 3: [10, 3, 1, 1] -> 12
         System.out.println(minimumCost(new int[]{10, 3, 1, 1}));
     }
 
