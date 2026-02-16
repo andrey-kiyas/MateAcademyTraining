@@ -4,7 +4,7 @@ package MateAcademy.leetcode.LC02Medium;
  * https://leetcode.com/problems/champagne-tower
  */
 
-public class LC799ChampagneTower {
+public class LC0799ChampagneTower {
     public static void main(String[] args) {
         System.out.println(champagneTower(1, 1, 1));           // 0.0
         System.out.println(champagneTower(2, 1, 1));           // 0.5
@@ -18,8 +18,7 @@ public class LC799ChampagneTower {
 
         for (int r = 0; r <= query_row; r++) {
             for (int c = 0; c <= r; c++) {
-                if (tower[r][c] > 1.0) {
-                    double excess = (tower[r][c] - 1.0) / 2.0;
+                if (tower[r][c] > 1.0) {                    double excess = (tower[r][c] - 1.0) / 2.0;
                     tower[r + 1][c] += excess;
                     tower[r + 1][c + 1] += excess;
                 }
