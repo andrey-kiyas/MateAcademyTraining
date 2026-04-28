@@ -1,4 +1,4 @@
-package MateAcademy.leetcode.medium;
+package MateAcademy.leetcode.LC02Medium;
 
 import java.util.ArrayList;
 import java.util.Arrays;
