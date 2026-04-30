@@ -1,10 +1,10 @@
-package MateAcademy.leetcode.easy;
+package MateAcademy.leetcode.LC01Easy;
 
 /**
  * https://leetcode.com/problems/remove-duplicates-from-sorted-array
  */
 
-public class RemoveDuplicatesFromSortedArray26 {
+public class LC0026RemoveDuplicatesFromSortedArray {
 
     public static void main(String[] args) {
         System.out.println(removeDuplicates(new int[]{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}));
