@@ -1,4 +1,4 @@
-package MateAcademy.leetcode.easy;
+package MateAcademy.leetcode.LC01Easy;
 
 /**
  * https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks
