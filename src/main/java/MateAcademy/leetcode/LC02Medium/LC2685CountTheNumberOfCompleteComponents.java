@@ -16,7 +16,6 @@ public class LC2685CountTheNumberOfCompleteComponents {
     }
 
     public static int countCompleteComponents(int n, int[][] edges) {
-        // 1. Построим граф (список смежности)
         List<List<Integer>> graph = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             graph.add(new ArrayList<>());
@@ -26,7 +25,6 @@ public class LC2685CountTheNumberOfCompleteComponents {
             graph.get(edge[1]).add(edge[0]);
         }
 
-        // 2. Поиск всех компонент связности
         boolean[] visited = new boolean[n];
         int completeComponents = 0;
 
@@ -35,7 +33,6 @@ public class LC2685CountTheNumberOfCompleteComponents {
                 List<Integer> component = new ArrayList<>();
                 dfs(graph, visited, i, component);
 
-                // 3. Проверим, является ли компонент связности полным графом
                 if (isCompleteGraph(graph, component)) {
                     completeComponents++;
                 }
@@ -45,7 +42,6 @@ public class LC2685CountTheNumberOfCompleteComponents {
         return completeComponents;
     }
 
-    // DFS для поиска всех узлов в компоненте связности
     private static void dfs(List<List<Integer>> graph, boolean[] visited, int node, List<Integer> component) {
         visited[node] = true;
         component.add(node);
@@ -56,7 +52,6 @@ public class LC2685CountTheNumberOfCompleteComponents {
         }
     }
 
-    // Проверка, является ли компонент полным графом
     private static boolean isCompleteGraph(List<List<Integer>> graph, List<Integer> component) {
         int size = component.size();
         for (int node : component) {
